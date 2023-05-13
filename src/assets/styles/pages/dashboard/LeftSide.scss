@@ -1,0 +1,120 @@
+@import './../../modules/index.scss';
+
+.left-side {
+	width: 20%;
+	min-width: 330px;
+
+	h4 {
+		display: inline-block;
+		border-radius: 50px;
+		padding: 10px 13px;
+		margin-bottom: 12px;
+		font-weight: 600;
+		font-size: 1em;
+		background: linear-gradient(to right, $dark-blue, #1c3fff);
+	}
+
+	p {
+		margin: 0;
+	}
+
+	div {
+		margin-left: 10px;
+
+		ul {
+			display: flex;
+			list-style: none;
+			padding: 0;
+			margin-top: 28px;
+			text-align: left;
+			user-select: none;
+
+			.li__year {
+				text-align: left;
+				padding: 4px 10px;
+				margin-right: 10px;
+				background-color: $dark-extra-blue;
+				width: 46px;
+				cursor: pointer;
+				transition: $click-transition-default;
+
+				&:hover {
+					background-color: $milk-hover;
+					color: black;
+				}
+
+				&_active {
+					background-color: $milk;
+					color: black;
+				}
+			}
+		}
+
+		h2 {
+			margin: 0;
+			font-size: 2em;
+			font-weight: 400;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 4em;
+			font-weight: 400;
+			user-select: all;
+		}
+
+		.real-income {
+			font-size: 1.3em;
+			user-select: none;
+
+			span {
+				user-select: all;
+			}
+		}
+
+		h3 {
+			margin-top: 20px;
+			margin-bottom: 12px;
+			font-size: 1.3em;
+			font-weight: 500;
+		}
+
+		.quantity-items {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+
+			.quantity-item {
+				font-size: 0.9em;
+				margin: 3px 0;
+				margin-left: 1.1em;
+				display: flex;
+				justify-content: flex-start;
+
+				&::before {
+					content: '\2022';
+					color: $bloody-red;
+					font-weight: bold;
+					display: inline-block;
+					width: 1em;
+					margin-left: -1.1em;
+				}
+
+				&_name {
+					margin-left: 10px;
+					min-width: 60%;
+				}
+
+				&_percentage {
+					min-width: 10%;
+				}
+
+				&_value {
+					min-width: 29%;
+					text-align: right;
+				}
+			}
+		}
+	}
+}

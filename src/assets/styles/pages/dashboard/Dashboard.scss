@@ -1,0 +1,8 @@
+@import './LeftSide.scss';
+@import './Rightside.scss';
+@import './Middleside.scss';
+
+.content {
+	display: flex;
+	justify-content: flex-start;
+}
