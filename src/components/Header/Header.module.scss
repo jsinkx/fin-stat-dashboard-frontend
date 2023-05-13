@@ -1,0 +1,47 @@
+@import '../../assets/styles/modules/index.scss';
+
+header {
+	display: flex;
+	align-items: center;
+	padding-top: 5px;
+	background-color: $dark-extra-blue;
+	box-sizing: border-box;
+	user-select: none;
+
+	img {
+		margin-inline: 30px 15px;
+		width: 28px;
+		height: 28px;
+		-webkit-user-drag: none;
+	}
+
+	h1 {
+		font-size: 1em;
+		font-weight: 400;
+		color: $milk;
+	}
+
+	.ul_right {
+		padding: 0;
+		margin: 0;
+		margin-left: auto;
+		margin-right: 60px;
+		list-style: none;
+
+		a {
+			font-size: 0.95em;
+			color: $milk;
+			transition: $hover-transition-default;
+
+			&:hover {
+				color: $milk-hover;
+			}
+		}
+
+		.active {
+			text-decoration-color: $dark-blue-active;
+			text-underline-offset: 7px;
+			text-decoration-thickness: 4px;
+		}
+	}
+}

@@ -1,12 +1,18 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+import Header from './components/Header/Header'
+import Home from './pages/Home'
+
 const App: React.FC = () => {
 	return (
 		<div className='App'>
-			<Routes>
-				<Route path='/' element={<h2> Hello! </h2>}></Route>
-			</Routes>
+			<Header />
+			<main>
+				<Routes>
+					<Route path='/' element={<Home />}></Route>
+				</Routes>
+			</main>
 		</div>
 	)
 }

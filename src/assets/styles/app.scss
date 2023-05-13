@@ -1,5 +1,10 @@
 @import './modules/index.scss';
 
+*::selection {
+	color: $milk;
+	background-color: $dark-full-blue;
+}
+
 html {
 	background-color: black; // Application background color
 
@@ -16,9 +21,16 @@ html {
 		}
 
 		// Global application styles
-		.app {
-			width: 90%;
-			border: 1px solid red;
+		.App {
+			width: 86%;
+			min-height: 100vh;
+			margin: 0 auto;
+			color: $milk;
+			box-sizing: border-box;
+
+			main {
+				margin-top: 30px;
+			}
 		}
 	}
 }
