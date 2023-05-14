@@ -1,5 +1,347 @@
 @import './../../modules/index.scss';
 
 .middle-side {
+	display: flex;
+	justify-content: center;
 	width: 100%;
+	border: 1px solid blue;
+
+	.bubbles {
+		display: block;
+		position: relative;
+		border: 1px solid purple;
+		width: 100%;
+		//margin: 30% 20%;
+		margin: 0;
+		margin-top: 20%;
+		margin-left: 35%;
+		//background-color: red;
+		transition: $hover-transition-default;
+
+		.main-bubble {
+			flex-direction: column;
+			width: 190px;
+			height: 190px;
+			margin-top: 22%;
+			text-align: center;
+			border-radius: 50%;
+			border: 17px solid $purple;
+			box-sizing: border-box;
+			transition: $hover-transition-default;
+
+			h3 {
+				font-size: 3em;
+				font-weight: 500;
+				margin: 0;
+				margin-top: 20px;
+				user-select: all;
+			}
+
+			p {
+				margin: 0;
+				font-size: 1em;
+				user-select: none;
+			}
+		}
+
+		.bubble-child {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: $hover-transition-default;
+
+			.bubble-child_value {
+				width: 50px;
+				height: 50px;
+				box-sizing: border-box;
+				padding-top: 18%;
+				text-align: center;
+				border-radius: 50%;
+				background: linear-gradient(to right, #262827, #21242d);
+				transition: $hover-transition-default;
+			}
+
+			.bubble-child_name {
+			}
+		}
+
+		.bubble {
+			width: 190px;
+			height: 190px;
+			margin-top: 22%;
+			text-align: center;
+			border-radius: 50%;
+			border: 17px solid $purple;
+			box-sizing: border-box;
+			transition: $hover-transition-default;
+		}
+	}
+
+	ul {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	li {
+		width: 50px;
+		height: 50px;
+		padding: 50px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: blue;
+	}
+}
+
+.circular-menu {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	align-items: center;
+	text-align: center;
+	transition: $hover-transition-default;
+
+	.circular-menu__item {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color: blue;
+		padding-top: 5%;
+		text-align: center;
+		box-sizing: border-box;
+		transition: $hover-transition-default;
+	}
+}
+
+.circular-menu__button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: initial;
+	font-size: 3em;
+	padding-top: 20%;
+	border: 15px solid #c228f1;
+	transition: $hover-transition-default;
+}
+
+.doughnut {
+	width: 90vh;
+	height: 90vh;
+	border: 2px solid rgba(68, 65, 65, 0.3);
+	position: relative;
+	border-radius: 500px;
+}
+
+.doughnut2 {
+	width: 34vw;
+	height: 70vh;
+	border: 2px solid rgba(68, 65, 65, 0.3);
+	position: relative;
+	border-radius: 500px;
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+.item h2 {
+	text-align: center;
+	position: absolute;
+	line-height: 700px;
+	width: 100%;
+	color: white;
+}
+
+@-webkit-keyframes css {
+	to {
+		stroke-dashoffset: 160;
+	}
+}
+
+.line {
+	position: absolute;
+	height: 3px;
+	width: 600px;
+	background: linear-gradient(270deg, #dc25fa 50%, #9947f7 69%);
+}
+
+.line_perc {
+	position: absolute;
+	height: 3px;
+	width: 600px;
+	background: linear-gradient(270deg, #7417bd 5%, #100d83 40%, #9bf8f2 69%);
+	transition: all 1s ease-out;
+}
+
+.circle_value {
+	position: absolute;
+	border-radius: 100%;
+	background: linear-gradient(80deg, #7417bd 5%, #100d83 86%);
+	width: 3.4vw;
+	height: 6vh;
+	transition: all 1s ease-out;
+	color: white;
+	text-align: center;
+	font-size: 1.5vh;
+	margin-bottom: -0.5rem;
+	white-space: nowrap;
+}
+
+.circle_perc {
+	position: absolute;
+	border-radius: 100%;
+	width: 2.8vw;
+	height: 5vh;
+	border: 0.4vh solid #9bf8f2;
+	background: black;
+	transition: all 1s ease-out;
+	color: white;
+	text-align: center;
+	font-size: 2.2vh;
+}
+
+.circle_perc_small {
+	position: absolute;
+	border-radius: 100%;
+	width: 2vw;
+	height: 4vh;
+	background: rgba(68, 65, 65);
+	transition: all 1s ease-out;
+	color: white;
+	font-size: 100%;
+	text-align: center;
+}
+
+@keyframes css {
+	to {
+		stroke-dashoffset: 160;
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		box-shadow: 0 0 8px #d61059, inset 0 0 8px #d61059;
+	}
+	50% {
+		box-shadow: 0 0 16px #d61059, inset 0 0 14px #d61059;
+	}
+	100% {
+		box-shadow: 0 0 8px #d61059, inset 0 0 8px #d61059;
+	}
+}
+
+.inner {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	box-shadow: 0 0 8px #d61059, inset 0 0 8px #d61059;
+	-webkit-animation: pulse 2s linear 1s infinite;
+}
+.inner p {
+	display: block;
+	text-align: center;
+	line-height: 100px;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 24px;
+	color: #d61059;
+	text-shadow: 0 0 4px #d61059;
+}
+
+.blue_box {
+	width: 10vw;
+	position: absolute;
+	height: 5vh;
+	border-radius: 25px;
+	background: blue;
+	color: white;
+	font-size: 2.3vh;
+	left: 1vw;
+	top: 17vh;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.dot {
+	width: 0.3vw;
+	height: 0.6vh;
+	border-radius: 100%;
+	background: red;
+	position: relative;
+	margin-bottom: 2.7vh;
+}
+
+.dots {
+	width: 2vw;
+	height: 10vh;
+	position: absolute;
+}
+
+.quantity {
+	width: 17vw;
+	height: 30vh;
+	position: absolute;
+}
+
+#graph\ area {
+	left: -40vw;
+	z-index: 9;
+	top: 60vh;
+	height: 11vh;
+	max-width: 17vw;
+	font-size: 1vh;
+	color: transparent;
+	--color: linear-gradient(blue, transparent);
+}
+
+#graph\ line {
+	left: -40vw;
+	z-index: 10;
+	top: 49vh;
+	height: 11vh;
+	max-width: 17vw;
+	font-size: 1vh;
+	color: white;
+	--color: blue;
+	background: transparent;
+}
+
+.side_bar {
+	position: absolute;
+	background: #060f28;
+	border-radius: 10px;
+}
+
+#profit-chart {
+	z-index: 10;
+	position: absolute;
+	color: white;
+	left: 94.5vw;
+	top: 40vh;
+	width: 3.5vw;
+	height: 17vh;
+	font-size: 1vh;
+	--color: linear-gradient(90deg, #9bf8f2, #7417bd);
+	--labels-size: 2vw;
 }

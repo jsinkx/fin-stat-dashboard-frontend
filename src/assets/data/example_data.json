@@ -1,870 +1,840 @@
 {
-  "Years": [2020, 2021, 2022, 2023, 2024],
-  "Datasets": [
-    {
-      "Year": 2020,
-      "RealIncome": 821612,
-      "TargetIncome": 898932,
-      "AverageIncome": 68468,
-      "IncomePercent": 91,
-      "ByMonths": {
-        "Jan": 84834,
-        "Feb": 69174,
-        "Mar": 65640,
-        "Apr": 66884,
-        "May": 66884,
-        "Jun": 66884,
-        "Jul": 66884,
-        "Aug": 66884,
-        "Sep": 66884,
-        "Oct": 66884,
-        "Nov": 66884,
-        "Dec": 66884
-      },
-      "Items": [
-        {
-          "Name": "Advertising",
-          "QuantityPercentage": 2,
-          "Quantity": 2844,
-          "Income": 224098,
-          "IncomePercentage": 27,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Company Website",
-              "Income": 2440,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Facebook Page",
-              "Income": 55842,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Google Ad",
-              "Income": 55838,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Television Ad",
-              "Income": 54141,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Youtube Channel",
-              "Income": 55837,
-              "IncomePercentage": 7
-            }
-          ]
-        },
-        {
-          "Name": "Asset sale",
-          "QuantityPercentage": 0,
-          "Quantity": 26,
-          "Income": 79860,
-          "IncomePercentage": 10,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Asset sale",
-              "Income": 79860,
-              "IncomePercentage": 10
-            }
-          ]
-        },
-        {
-          "Name": "Licensing",
-          "QuantityPercentage": 62,
-          "Quantity": 72768,
-          "Income": 154701,
-          "IncomePercentage": 19,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Floating License",
-              "Income": 98400,
-              "IncomePercentage": 12
-            },
-            {
-              "Name": "Software Metered License",
-              "Income": 56301,
-              "IncomePercentage": 7
-            }
-          ]
-        },
-        {
-          "Name": "Renting",
-          "QuantityPercentage": 14,
-          "Quantity": 16488,
-          "Income": 65963,
-          "IncomePercentage": 8,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Equipments",
-              "Income": 56300,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Lands",
-              "Income": 5866,
-              "IncomePercentage": 1
-            },
-            {
-              "Name": "Offices",
-              "Income": 3797,
-              "IncomePercentage": 0
-            }
-          ]
-        },
-        {
-          "Name": "Subscription",
-          "QuantityPercentage": 11,
-          "Quantity": 13188,
-          "Income": 126275,
-          "IncomePercentage": 15,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Premium",
-              "Income": 55630,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Prime",
-              "Income": 70645,
-              "IncomePercentage": 9
-            }
-          ]
-        },
-        {
-          "Name": "Usage fees",
-          "QuantityPercentage": 10,
-          "Quantity": 11856,
-          "Income": 170716,
-          "IncomePercentage": 21,
-          "IncomeBreakdowns": [
-            {
-              "Name": "New ",
-              "Income": 86016,
-              "IncomePercentage": 10
-            },
-            {
-              "Name": "Renewal",
-              "Income": 84700,
-              "IncomePercentage": 10
-            }
-          ]
-        }
-      ],
-      "OperatingProfits": {
-        "Total": 164322,
-        "ByMonths": {
-          "Jan": 16966,
-          "Feb": 13834,
-          "Mar": 13128,
-          "Apr": 13376,
-          "May": 13376,
-          "Jun": 13376,
-          "Jul": 13376,
-          "Aug": 13376,
-          "Sep": 13376,
-          "Oct": 13376,
-          "Nov": 13376,
-          "Dec": 13376
-        }
-      },
-      "MarketingStrategies": {
-        "B2B": [493010, 60],
-        "B2C": [328602, 40]
-      }
-    },
-    {
-      "Year": 2021,
-      "RealIncome": 828952,
-      "TargetIncome": 920129,
-      "AverageIncome": 69079,
-      "IncomePercent": 90,
-      "ByMonths": {
-        "Jan": 71042,
-        "Feb": 66884,
-        "Mar": 66884,
-        "Apr": 68204,
-        "May": 75200,
-        "Jun": 66884,
-        "Jul": 66884,
-        "Aug": 71391,
-        "Sep": 71729,
-        "Oct": 66884,
-        "Nov": 70075,
-        "Dec": 66884
-      },
-      "Items": [
-        {
-          "Name": "Advertising",
-          "QuantityPercentage": 19,
-          "Quantity": 50406,
-          "Income": 227163,
-          "IncomePercentage": 27,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Company Website",
-              "Income": 2430,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Facebook Page",
-              "Income": 56300,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Google Ad",
-              "Income": 55380,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Television Ad",
-              "Income": 56530,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Youtube Channel",
-              "Income": 56523,
-              "IncomePercentage": 7
-            }
-          ]
-        },
-        {
-          "Name": "Asset sale",
-          "QuantityPercentage": 5,
-          "Quantity": 12774,
-          "Income": 82830,
-          "IncomePercentage": 10,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Asset sale",
-              "Income": 82830,
-              "IncomePercentage": 10
-            }
-          ]
-        },
-        {
-          "Name": "Licensing",
-          "QuantityPercentage": 38,
-          "Quantity": 98365,
-          "Income": 155730,
-          "IncomePercentage": 19,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Floating License",
-              "Income": 99200,
-              "IncomePercentage": 12
-            },
-            {
-              "Name": "Software Metered License",
-              "Income": 56530,
-              "IncomePercentage": 7
-            }
-          ]
-        },
-        {
-          "Name": "Renting",
-          "QuantityPercentage": 19,
-          "Quantity": 50849,
-          "Income": 60477,
-          "IncomePercentage": 7,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Equipments",
-              "Income": 56757,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Lands",
-              "Income": 2470,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Offices",
-              "Income": 1250,
-              "IncomePercentage": 0
-            }
-          ]
-        },
-        {
-          "Name": "Subscription",
-          "QuantityPercentage": 8,
-          "Quantity": 21245,
-          "Income": 128452,
-          "IncomePercentage": 15,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Premium",
-              "Income": 57232,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Prime",
-              "Income": 71219,
-              "IncomePercentage": 9
-            }
-          ]
-        },
-        {
-          "Name": "Usage fees",
-          "QuantityPercentage": 11,
-          "Quantity": 27828,
-          "Income": 174300,
-          "IncomePercentage": 21,
-          "IncomeBreakdowns": [
-            {
-              "Name": "New ",
-              "Income": 87500,
-              "IncomePercentage": 11
-            },
-            {
-              "Name": "Renewal",
-              "Income": 86800,
-              "IncomePercentage": 10
-            }
-          ]
-        }
-      ],
-      "OperatingProfits": {
-        "Total": 165790,
-        "ByMonths": {
-          "Jan": 14208,
-          "Feb": 13376,
-          "Mar": 13376,
-          "Apr": 13640,
-          "May": 15040,
-          "Jun": 13376,
-          "Jul": 13376,
-          "Aug": 14278,
-          "Sep": 14345,
-          "Oct": 13376,
-          "Nov": 14015,
-          "Dec": 13376
-        }
-      },
-      "MarketingStrategies": {
-        "B2B": [714241, 86],
-        "B2C": [114711, 14]
-      }
-    },
-    {
-      "Year": 2022,
-      "RealIncome": 720883,
-      "TargetIncome": 898932,
-      "AverageIncome": 60074,
-      "IncomePercent": 80,
-      "ByMonths": {
-        "Jan": 64934,
-        "Feb": 58642,
-        "Mar": 57630,
-        "Apr": 58950,
-        "May": 60548,
-        "Jun": 55608,
-        "Jul": 57630,
-        "Aug": 60977,
-        "Sep": 59906,
-        "Oct": 66177,
-        "Nov": 62246,
-        "Dec": 57630
-      },
-      "Items": [
-        {
-          "Name": "Advertising",
-          "QuantityPercentage": 2,
-          "Quantity": 2844,
-          "Income": 117541,
-          "IncomePercentage": 16,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Company Website",
-              "Income": 1225,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Facebook Page",
-              "Income": 28379,
-              "IncomePercentage": 4
-            },
-            {
-              "Name": "Google Ad",
-              "Income": 27919,
-              "IncomePercentage": 4
-            },
-            {
-              "Name": "Television Ad",
-              "Income": 31528,
-              "IncomePercentage": 4
-            },
-            {
-              "Name": "Youtube Channel",
-              "Income": 28491,
-              "IncomePercentage": 4
-            }
-          ]
-        },
-        {
-          "Name": "Asset sale",
-          "QuantityPercentage": 0,
-          "Quantity": 26,
-          "Income": 77422,
-          "IncomePercentage": 11,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Asset sale",
-              "Income": 77422,
-              "IncomePercentage": 11
-            }
-          ]
-        },
-        {
-          "Name": "Licensing",
-          "QuantityPercentage": 62,
-          "Quantity": 72768,
-          "Income": 157387,
-          "IncomePercentage": 22,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Floating License",
-              "Income": 100400,
-              "IncomePercentage": 14
-            },
-            {
-              "Name": "Software Metered License",
-              "Income": 56987,
-              "IncomePercentage": 8
-            }
-          ]
-        },
-        {
-          "Name": "Renting",
-          "QuantityPercentage": 14,
-          "Quantity": 16488,
-          "Income": 61204,
-          "IncomePercentage": 8,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Equipments",
-              "Income": 57444,
-              "IncomePercentage": 8
-            },
-            {
-              "Name": "Lands",
-              "Income": 2490,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Offices",
-              "Income": 1270,
-              "IncomePercentage": 0
-            }
-          ]
-        },
-        {
-          "Name": "Subscription",
-          "QuantityPercentage": 11,
-          "Quantity": 13188,
-          "Income": 130229,
-          "IncomePercentage": 18,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Premium",
-              "Income": 58148,
-              "IncomePercentage": 8
-            },
-            {
-              "Name": "Prime",
-              "Income": 72081,
-              "IncomePercentage": 10
-            }
-          ]
-        },
-        {
-          "Name": "Usage fees",
-          "QuantityPercentage": 10,
-          "Quantity": 11856,
-          "Income": 177100,
-          "IncomePercentage": 25,
-          "IncomeBreakdowns": [
-            {
-              "Name": "New ",
-              "Income": 88900,
-              "IncomePercentage": 12
-            },
-            {
-              "Name": "Renewal",
-              "Income": 88200,
-              "IncomePercentage": 12
-            }
-          ]
-        }
-      ],
-      "OperatingProfits": {
-        "Total": 144177,
-        "ByMonths": {
-          "Jan": 12986,
-          "Feb": 11728,
-          "Mar": 11526,
-          "Apr": 11790,
-          "May": 12109,
-          "Jun": 11121,
-          "Jul": 11526,
-          "Aug": 12195,
-          "Sep": 11981,
-          "Oct": 13235,
-          "Nov": 12449,
-          "Dec": 11526
-        }
-      },
-      "MarketingStrategies": {
-        "B2B": [459823, 64],
-        "B2C": [261060, 36]
-      }
-    },
-    {
-      "Year": 2023,
-      "RealIncome": 773252,
-      "TargetIncome": 898932,
-      "AverageIncome": 64438,
-      "IncomePercent": 86,
-      "ByMonths": {
-        "Jan": 64934,
-        "Feb": 58642,
-        "Mar": 61887,
-        "Apr": 77628,
-        "May": 60548,
-        "Jun": 63285,
-        "Jul": 57630,
-        "Aug": 60977,
-        "Sep": 59906,
-        "Oct": 66177,
-        "Nov": 84002,
-        "Dec": 57630
-      },
-      "Items": [
-        {
-          "Name": "Advertising",
-          "QuantityPercentage": 2,
-          "Quantity": 2844,
-          "Income": 117541,
-          "IncomePercentage": 15,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Company Website",
-              "Income": 1225,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Facebook Page",
-              "Income": 28379,
-              "IncomePercentage": 4
-            },
-            {
-              "Name": "Google Ad",
-              "Income": 27919,
-              "IncomePercentage": 4
-            },
-            {
-              "Name": "Television Ad",
-              "Income": 31528,
-              "IncomePercentage": 4
-            },
-            {
-              "Name": "Youtube Channel",
-              "Income": 28491,
-              "IncomePercentage": 4
-            }
-          ]
-        },
-        {
-          "Name": "Asset sale",
-          "QuantityPercentage": 0,
-          "Quantity": 26,
-          "Income": 77422,
-          "IncomePercentage": 10,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Asset sale",
-              "Income": 77422,
-              "IncomePercentage": 10
-            }
-          ]
-        },
-        {
-          "Name": "Licensing",
-          "QuantityPercentage": 62,
-          "Quantity": 72768,
-          "Income": 157387,
-          "IncomePercentage": 20,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Floating License",
-              "Income": 100400,
-              "IncomePercentage": 13
-            },
-            {
-              "Name": "Software Metered License",
-              "Income": 56987,
-              "IncomePercentage": 7
-            }
-          ]
-        },
-        {
-          "Name": "Renting",
-          "QuantityPercentage": 14,
-          "Quantity": 16488,
-          "Income": 61204,
-          "IncomePercentage": 8,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Equipments",
-              "Income": 57444,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Lands",
-              "Income": 2490,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Offices",
-              "Income": 1270,
-              "IncomePercentage": 0
-            }
-          ]
-        },
-        {
-          "Name": "Subscription",
-          "QuantityPercentage": 11,
-          "Quantity": 13188,
-          "Income": 182598,
-          "IncomePercentage": 24,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Premium",
-              "Income": 77066,
-              "IncomePercentage": 10
-            },
-            {
-              "Name": "Prime",
-              "Income": 105533,
-              "IncomePercentage": 14
-            }
-          ]
-        },
-        {
-          "Name": "Usage fees",
-          "QuantityPercentage": 10,
-          "Quantity": 11856,
-          "Income": 177100,
-          "IncomePercentage": 23,
-          "IncomeBreakdowns": [
-            {
-              "Name": "New ",
-              "Income": 88900,
-              "IncomePercentage": 11
-            },
-            {
-              "Name": "Renewal",
-              "Income": 88200,
-              "IncomePercentage": 11
-            }
-          ]
-        }
-      ],
-      "OperatingProfits": {
-        "Total": 154650,
-        "ByMonths": {
-          "Jan": 12986,
-          "Feb": 11728,
-          "Mar": 12377,
-          "Apr": 15525,
-          "May": 12109,
-          "Jun": 12657,
-          "Jul": 11526,
-          "Aug": 12195,
-          "Sep": 11981,
-          "Oct": 13235,
-          "Nov": 16800,
-          "Dec": 11526
-        }
-      },
-      "MarketingStrategies": {
-        "B2B": [261479, 34],
-        "B2C": [511773, 66]
-      }
-    },
-    {
-      "Year": 2024,
-      "RealIncome": 802618,
-      "TargetIncome": 898932,
-      "AverageIncome": 66885,
-      "IncomePercent": 89,
-      "ByMonths": {
-        "Jan": 66884,
-        "Feb": 66884,
-        "Mar": 66884,
-        "Apr": 66884,
-        "May": 66884,
-        "Jun": 66884,
-        "Jul": 66884,
-        "Aug": 66884,
-        "Sep": 66884,
-        "Oct": 66884,
-        "Nov": 66884,
-        "Dec": 66884
-      },
-      "Items": [
-        {
-          "Name": "Advertising",
-          "QuantityPercentage": 2,
-          "Quantity": 2844,
-          "Income": 222098,
-          "IncomePercentage": 28,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Company Website",
-              "Income": 2400,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Facebook Page",
-              "Income": 54926,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Google Ad",
-              "Income": 54923,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Television Ad",
-              "Income": 54928,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Youtube Channel",
-              "Income": 54922,
-              "IncomePercentage": 7
-            }
-          ]
-        },
-        {
-          "Name": "Asset sale",
-          "QuantityPercentage": 0,
-          "Quantity": 26,
-          "Income": 79200,
-          "IncomePercentage": 10,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Asset sale",
-              "Income": 79200,
-              "IncomePercentage": 10
-            }
-          ]
-        },
-        {
-          "Name": "Licensing",
-          "QuantityPercentage": 62,
-          "Quantity": 72768,
-          "Income": 150928,
-          "IncomePercentage": 19,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Floating License",
-              "Income": 96000,
-              "IncomePercentage": 12
-            },
-            {
-              "Name": "Software Metered License",
-              "Income": 54928,
-              "IncomePercentage": 7
-            }
-          ]
-        },
-        {
-          "Name": "Renting",
-          "QuantityPercentage": 14,
-          "Quantity": 16488,
-          "Income": 58526,
-          "IncomePercentage": 7,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Equipments",
-              "Income": 54926,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Lands",
-              "Income": 2400,
-              "IncomePercentage": 0
-            },
-            {
-              "Name": "Offices",
-              "Income": 1200,
-              "IncomePercentage": 0
-            }
-          ]
-        },
-        {
-          "Name": "Subscription",
-          "QuantityPercentage": 11,
-          "Quantity": 13188,
-          "Income": 123865,
-          "IncomePercentage": 15,
-          "IncomeBreakdowns": [
-            {
-              "Name": "Premium",
-              "Income": 54943,
-              "IncomePercentage": 7
-            },
-            {
-              "Name": "Prime",
-              "Income": 68922,
-              "IncomePercentage": 9
-            }
-          ]
-        },
-        {
-          "Name": "Usage fees",
-          "QuantityPercentage": 10,
-          "Quantity": 11856,
-          "Income": 168000,
-          "IncomePercentage": 21,
-          "IncomeBreakdowns": [
-            {
-              "Name": "New ",
-              "Income": 84000,
-              "IncomePercentage": 10
-            },
-            {
-              "Name": "Renewal",
-              "Income": 84000,
-              "IncomePercentage": 10
-            }
-          ]
-        }
-      ],
-      "OperatingProfits": {
-        "Total": 160524,
-        "ByMonths": {
-          "Jan": 13376,
-          "Feb": 13376,
-          "Mar": 13376,
-          "Apr": 13376,
-          "May": 13376,
-          "Jun": 13376,
-          "Jul": 13376,
-          "Aug": 13376,
-          "Sep": 13376,
-          "Oct": 13376,
-          "Nov": 13376,
-          "Dec": 13376
-        }
-      },
-      "MarketingStrategies": {
-        "B2B": [432460, 54],
-        "B2C": [370157, 46]
-      }
-    }
-  ]
+	"Years": [2020, 2021, 2022, 2023, 2024],
+	"Datasets": [
+		{
+			"Year": 2020,
+			"RealIncome": 821612,
+			"TargetIncome": 898932,
+			"AverageIncome": 68468,
+			"IncomePercent": 91,
+			"ByMonths": {
+				"Jan": 84834,
+				"Feb": 69174,
+				"Mar": 65640,
+				"Apr": 66884,
+				"May": 66884,
+				"Jun": 66884,
+				"Jul": 66884,
+				"Aug": 66884,
+				"Sep": 66884,
+				"Oct": 66884,
+				"Nov": 66884,
+				"Dec": 66884
+			},
+			"Items": [
+				{
+					"Name": "Advertising",
+					"QuantityPercentage": 2,
+					"Quantity": 2844,
+					"Income": 224098,
+					"IncomePercentage": 27,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Company Website",
+							"Income": 2440,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Facebook Page",
+							"Income": 55842,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Google Ad",
+							"Income": 55838,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Television Ad",
+							"Income": 54141,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Youtube Channel",
+							"Income": 55837,
+							"IncomePercentage": 7
+						}
+					]
+				},
+				{
+					"Name": "Asset sale",
+					"QuantityPercentage": 0,
+					"Quantity": 26,
+					"Income": 79860,
+					"IncomePercentage": 10,
+					"IncomeBreakdowns": []
+				},
+				{
+					"Name": "Licensing",
+					"QuantityPercentage": 62,
+					"Quantity": 72768,
+					"Income": 154701,
+					"IncomePercentage": 19,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Floating License",
+							"Income": 98400,
+							"IncomePercentage": 12
+						},
+						{
+							"Name": "Software Metered License",
+							"Income": 56301,
+							"IncomePercentage": 7
+						}
+					]
+				},
+				{
+					"Name": "Renting",
+					"QuantityPercentage": 14,
+					"Quantity": 16488,
+					"Income": 65963,
+					"IncomePercentage": 8,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Equipments",
+							"Income": 56300,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Lands",
+							"Income": 5866,
+							"IncomePercentage": 1
+						},
+						{
+							"Name": "Offices",
+							"Income": 3797,
+							"IncomePercentage": 0
+						}
+					]
+				},
+				{
+					"Name": "Subscription",
+					"QuantityPercentage": 11,
+					"Quantity": 13188,
+					"Income": 126275,
+					"IncomePercentage": 15,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Premium",
+							"Income": 55630,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Prime",
+							"Income": 70645,
+							"IncomePercentage": 9
+						}
+					]
+				},
+				{
+					"Name": "Usage fees",
+					"QuantityPercentage": 10,
+					"Quantity": 11856,
+					"Income": 170716,
+					"IncomePercentage": 21,
+					"IncomeBreakdowns": [
+						{
+							"Name": "New ",
+							"Income": 86016,
+							"IncomePercentage": 10
+						},
+						{
+							"Name": "Renewal",
+							"Income": 84700,
+							"IncomePercentage": 10
+						}
+					]
+				}
+			],
+			"OperatingProfits": {
+				"Total": 164322,
+				"ByMonths": {
+					"Jan": 16966,
+					"Feb": 13834,
+					"Mar": 13128,
+					"Apr": 13376,
+					"May": 13376,
+					"Jun": 13376,
+					"Jul": 13376,
+					"Aug": 13376,
+					"Sep": 13376,
+					"Oct": 13376,
+					"Nov": 13376,
+					"Dec": 13376
+				}
+			},
+			"MarketingStrategies": {
+				"B2B": [493010, 60],
+				"B2C": [328602, 40]
+			}
+		},
+		{
+			"Year": 2021,
+			"RealIncome": 828952,
+			"TargetIncome": 920129,
+			"AverageIncome": 69079,
+			"IncomePercent": 90,
+			"ByMonths": {
+				"Jan": 71042,
+				"Feb": 66884,
+				"Mar": 66884,
+				"Apr": 68204,
+				"May": 75200,
+				"Jun": 66884,
+				"Jul": 66884,
+				"Aug": 71391,
+				"Sep": 71729,
+				"Oct": 66884,
+				"Nov": 70075,
+				"Dec": 66884
+			},
+			"Items": [
+				{
+					"Name": "Advertising",
+					"QuantityPercentage": 19,
+					"Quantity": 50406,
+					"Income": 227163,
+					"IncomePercentage": 27,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Company Website",
+							"Income": 2430,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Facebook Page",
+							"Income": 56300,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Google Ad",
+							"Income": 55380,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Television Ad",
+							"Income": 56530,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Youtube Channel",
+							"Income": 56523,
+							"IncomePercentage": 7
+						}
+					]
+				},
+				{
+					"Name": "Asset sale",
+					"QuantityPercentage": 5,
+					"Quantity": 12774,
+					"Income": 82830,
+					"IncomePercentage": 10,
+					"IncomeBreakdowns": []
+				},
+				{
+					"Name": "Licensing",
+					"QuantityPercentage": 38,
+					"Quantity": 98365,
+					"Income": 155730,
+					"IncomePercentage": 19,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Floating License",
+							"Income": 99200,
+							"IncomePercentage": 12
+						},
+						{
+							"Name": "Software Metered License",
+							"Income": 56530,
+							"IncomePercentage": 7
+						}
+					]
+				},
+				{
+					"Name": "Renting",
+					"QuantityPercentage": 19,
+					"Quantity": 50849,
+					"Income": 60477,
+					"IncomePercentage": 7,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Equipments",
+							"Income": 56757,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Lands",
+							"Income": 2470,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Offices",
+							"Income": 1250,
+							"IncomePercentage": 0
+						}
+					]
+				},
+				{
+					"Name": "Subscription",
+					"QuantityPercentage": 8,
+					"Quantity": 21245,
+					"Income": 128452,
+					"IncomePercentage": 15,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Premium",
+							"Income": 57232,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Prime",
+							"Income": 71219,
+							"IncomePercentage": 9
+						}
+					]
+				},
+				{
+					"Name": "Usage fees",
+					"QuantityPercentage": 11,
+					"Quantity": 27828,
+					"Income": 174300,
+					"IncomePercentage": 21,
+					"IncomeBreakdowns": [
+						{
+							"Name": "New ",
+							"Income": 87500,
+							"IncomePercentage": 11
+						},
+						{
+							"Name": "Renewal",
+							"Income": 86800,
+							"IncomePercentage": 10
+						}
+					]
+				}
+			],
+			"OperatingProfits": {
+				"Total": 165790,
+				"ByMonths": {
+					"Jan": 14208,
+					"Feb": 13376,
+					"Mar": 13376,
+					"Apr": 13640,
+					"May": 15040,
+					"Jun": 13376,
+					"Jul": 13376,
+					"Aug": 14278,
+					"Sep": 14345,
+					"Oct": 13376,
+					"Nov": 14015,
+					"Dec": 13376
+				}
+			},
+			"MarketingStrategies": {
+				"B2B": [714241, 86],
+				"B2C": [114711, 14]
+			}
+		},
+		{
+			"Year": 2022,
+			"RealIncome": 720883,
+			"TargetIncome": 898932,
+			"AverageIncome": 60074,
+			"IncomePercent": 80,
+			"ByMonths": {
+				"Jan": 64934,
+				"Feb": 58642,
+				"Mar": 57630,
+				"Apr": 58950,
+				"May": 60548,
+				"Jun": 55608,
+				"Jul": 57630,
+				"Aug": 60977,
+				"Sep": 59906,
+				"Oct": 66177,
+				"Nov": 62246,
+				"Dec": 57630
+			},
+			"Items": [
+				{
+					"Name": "Advertising",
+					"QuantityPercentage": 2,
+					"Quantity": 2844,
+					"Income": 117541,
+					"IncomePercentage": 16,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Company Website",
+							"Income": 1225,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Facebook Page",
+							"Income": 28379,
+							"IncomePercentage": 4
+						},
+						{
+							"Name": "Google Ad",
+							"Income": 27919,
+							"IncomePercentage": 4
+						},
+						{
+							"Name": "Television Ad",
+							"Income": 31528,
+							"IncomePercentage": 4
+						},
+						{
+							"Name": "Youtube Channel",
+							"Income": 28491,
+							"IncomePercentage": 4
+						}
+					]
+				},
+				{
+					"Name": "Asset sale",
+					"QuantityPercentage": 0,
+					"Quantity": 26,
+					"Income": 77422,
+					"IncomePercentage": 11,
+					"IncomeBreakdowns": []
+				},
+				{
+					"Name": "Licensing",
+					"QuantityPercentage": 62,
+					"Quantity": 72768,
+					"Income": 157387,
+					"IncomePercentage": 22,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Floating License",
+							"Income": 100400,
+							"IncomePercentage": 14
+						},
+						{
+							"Name": "Software Metered License",
+							"Income": 56987,
+							"IncomePercentage": 8
+						}
+					]
+				},
+				{
+					"Name": "Renting",
+					"QuantityPercentage": 14,
+					"Quantity": 16488,
+					"Income": 61204,
+					"IncomePercentage": 8,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Equipments",
+							"Income": 57444,
+							"IncomePercentage": 8
+						},
+						{
+							"Name": "Lands",
+							"Income": 2490,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Offices",
+							"Income": 1270,
+							"IncomePercentage": 0
+						}
+					]
+				},
+				{
+					"Name": "Subscription",
+					"QuantityPercentage": 11,
+					"Quantity": 13188,
+					"Income": 130229,
+					"IncomePercentage": 18,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Premium",
+							"Income": 58148,
+							"IncomePercentage": 8
+						},
+						{
+							"Name": "Prime",
+							"Income": 72081,
+							"IncomePercentage": 10
+						}
+					]
+				},
+				{
+					"Name": "Usage fees",
+					"QuantityPercentage": 10,
+					"Quantity": 11856,
+					"Income": 177100,
+					"IncomePercentage": 25,
+					"IncomeBreakdowns": [
+						{
+							"Name": "New ",
+							"Income": 88900,
+							"IncomePercentage": 12
+						},
+						{
+							"Name": "Renewal",
+							"Income": 88200,
+							"IncomePercentage": 12
+						}
+					]
+				}
+			],
+			"OperatingProfits": {
+				"Total": 144177,
+				"ByMonths": {
+					"Jan": 12986,
+					"Feb": 11728,
+					"Mar": 11526,
+					"Apr": 11790,
+					"May": 12109,
+					"Jun": 11121,
+					"Jul": 11526,
+					"Aug": 12195,
+					"Sep": 11981,
+					"Oct": 13235,
+					"Nov": 12449,
+					"Dec": 11526
+				}
+			},
+			"MarketingStrategies": {
+				"B2B": [459823, 64],
+				"B2C": [261060, 36]
+			}
+		},
+		{
+			"Year": 2023,
+			"RealIncome": 773252,
+			"TargetIncome": 898932,
+			"AverageIncome": 64438,
+			"IncomePercent": 86,
+			"ByMonths": {
+				"Jan": 64934,
+				"Feb": 58642,
+				"Mar": 61887,
+				"Apr": 77628,
+				"May": 60548,
+				"Jun": 63285,
+				"Jul": 57630,
+				"Aug": 60977,
+				"Sep": 59906,
+				"Oct": 66177,
+				"Nov": 84002,
+				"Dec": 57630
+			},
+			"Items": [
+				{
+					"Name": "Advertising",
+					"QuantityPercentage": 2,
+					"Quantity": 2844,
+					"Income": 117541,
+					"IncomePercentage": 15,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Company Website",
+							"Income": 1225,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Facebook Page",
+							"Income": 28379,
+							"IncomePercentage": 4
+						},
+						{
+							"Name": "Google Ad",
+							"Income": 27919,
+							"IncomePercentage": 4
+						},
+						{
+							"Name": "Television Ad",
+							"Income": 31528,
+							"IncomePercentage": 4
+						},
+						{
+							"Name": "Youtube Channel",
+							"Income": 28491,
+							"IncomePercentage": 4
+						}
+					]
+				},
+				{
+					"Name": "Asset sale",
+					"QuantityPercentage": 0,
+					"Quantity": 26,
+					"Income": 77422,
+					"IncomePercentage": 10,
+					"IncomeBreakdowns": []
+				},
+				{
+					"Name": "Licensing",
+					"QuantityPercentage": 62,
+					"Quantity": 72768,
+					"Income": 157387,
+					"IncomePercentage": 20,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Floating License",
+							"Income": 100400,
+							"IncomePercentage": 13
+						},
+						{
+							"Name": "Software Metered License",
+							"Income": 56987,
+							"IncomePercentage": 7
+						}
+					]
+				},
+				{
+					"Name": "Renting",
+					"QuantityPercentage": 14,
+					"Quantity": 16488,
+					"Income": 61204,
+					"IncomePercentage": 8,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Equipments",
+							"Income": 57444,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Lands",
+							"Income": 2490,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Offices",
+							"Income": 1270,
+							"IncomePercentage": 0
+						}
+					]
+				},
+				{
+					"Name": "Subscription",
+					"QuantityPercentage": 11,
+					"Quantity": 13188,
+					"Income": 182598,
+					"IncomePercentage": 24,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Premium",
+							"Income": 77066,
+							"IncomePercentage": 10
+						},
+						{
+							"Name": "Prime",
+							"Income": 105533,
+							"IncomePercentage": 14
+						}
+					]
+				},
+				{
+					"Name": "Usage fees",
+					"QuantityPercentage": 10,
+					"Quantity": 11856,
+					"Income": 177100,
+					"IncomePercentage": 23,
+					"IncomeBreakdowns": [
+						{
+							"Name": "New ",
+							"Income": 88900,
+							"IncomePercentage": 11
+						},
+						{
+							"Name": "Renewal",
+							"Income": 88200,
+							"IncomePercentage": 11
+						}
+					]
+				}
+			],
+			"OperatingProfits": {
+				"Total": 154650,
+				"ByMonths": {
+					"Jan": 12986,
+					"Feb": 11728,
+					"Mar": 12377,
+					"Apr": 15525,
+					"May": 12109,
+					"Jun": 12657,
+					"Jul": 11526,
+					"Aug": 12195,
+					"Sep": 11981,
+					"Oct": 13235,
+					"Nov": 16800,
+					"Dec": 11526
+				}
+			},
+			"MarketingStrategies": {
+				"B2B": [261479, 34],
+				"B2C": [511773, 66]
+			}
+		},
+		{
+			"Year": 2024,
+			"RealIncome": 802618,
+			"TargetIncome": 898932,
+			"AverageIncome": 66885,
+			"IncomePercent": 89,
+			"ByMonths": {
+				"Jan": 66884,
+				"Feb": 66884,
+				"Mar": 66884,
+				"Apr": 66884,
+				"May": 66884,
+				"Jun": 66884,
+				"Jul": 66884,
+				"Aug": 66884,
+				"Sep": 66884,
+				"Oct": 66884,
+				"Nov": 66884,
+				"Dec": 66884
+			},
+			"Items": [
+				{
+					"Name": "Advertising",
+					"QuantityPercentage": 2,
+					"Quantity": 2844,
+					"Income": 222098,
+					"IncomePercentage": 28,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Company Website",
+							"Income": 2400,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Facebook Page",
+							"Income": 54926,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Google Ad",
+							"Income": 54923,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Television Ad",
+							"Income": 54928,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Youtube Channel",
+							"Income": 54922,
+							"IncomePercentage": 7
+						}
+					]
+				},
+				{
+					"Name": "Asset sale",
+					"QuantityPercentage": 0,
+					"Quantity": 26,
+					"Income": 79200,
+					"IncomePercentage": 10,
+					"IncomeBreakdowns": []
+				},
+				{
+					"Name": "Licensing",
+					"QuantityPercentage": 62,
+					"Quantity": 72768,
+					"Income": 150928,
+					"IncomePercentage": 19,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Floating License",
+							"Income": 96000,
+							"IncomePercentage": 12
+						},
+						{
+							"Name": "Software Metered License",
+							"Income": 54928,
+							"IncomePercentage": 7
+						}
+					]
+				},
+				{
+					"Name": "Renting",
+					"QuantityPercentage": 14,
+					"Quantity": 16488,
+					"Income": 58526,
+					"IncomePercentage": 7,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Equipments",
+							"Income": 54926,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Lands",
+							"Income": 2400,
+							"IncomePercentage": 0
+						},
+						{
+							"Name": "Offices",
+							"Income": 1200,
+							"IncomePercentage": 0
+						}
+					]
+				},
+				{
+					"Name": "Subscription",
+					"QuantityPercentage": 11,
+					"Quantity": 13188,
+					"Income": 123865,
+					"IncomePercentage": 15,
+					"IncomeBreakdowns": [
+						{
+							"Name": "Premium",
+							"Income": 54943,
+							"IncomePercentage": 7
+						},
+						{
+							"Name": "Prime",
+							"Income": 68922,
+							"IncomePercentage": 9
+						}
+					]
+				},
+				{
+					"Name": "Usage fees",
+					"QuantityPercentage": 10,
+					"Quantity": 11856,
+					"Income": 168000,
+					"IncomePercentage": 21,
+					"IncomeBreakdowns": [
+						{
+							"Name": "New ",
+							"Income": 84000,
+							"IncomePercentage": 10
+						},
+						{
+							"Name": "Renewal",
+							"Income": 84000,
+							"IncomePercentage": 10
+						}
+					]
+				}
+			],
+			"OperatingProfits": {
+				"Total": 160524,
+				"ByMonths": {
+					"Jan": 13376,
+					"Feb": 13376,
+					"Mar": 13376,
+					"Apr": 13376,
+					"May": 13376,
+					"Jun": 13376,
+					"Jul": 13376,
+					"Aug": 13376,
+					"Sep": 13376,
+					"Oct": 13376,
+					"Nov": 13376,
+					"Dec": 13376
+				}
+			},
+			"MarketingStrategies": {
+				"B2B": [432460, 54],
+				"B2C": [370157, 46]
+			}
+		}
+	]
 }

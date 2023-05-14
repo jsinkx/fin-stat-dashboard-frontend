@@ -6,13 +6,12 @@ import IncomeStatistic from './IncomeStatistic'
 
 type LeftSideProps = {
 	data: any
+	years: string[]
+	currentYear: string
+	setCurrentYear: React.Dispatch<React.SetStateAction<string>>
 }
 
-const LeftSide: React.FC<LeftSideProps> = ({ data }) => {
-	const [currentYear, setCurrentYear] = React.useState<string>(data?.Years[0] as string)
-
-	const currentDatasetByYear = data.Datasets.find((d: any) => d.Year === currentYear) // Дадасет выбранного года
-
+const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurrentYear }) => {
 	return (
 		<aside className='left-side'>
 			<h4> Income Source </h4>
@@ -22,8 +21,8 @@ const LeftSide: React.FC<LeftSideProps> = ({ data }) => {
 			</p>
 			<div>
 				<ul>
-					{data?.Years &&
-						data?.Years.map((year: string) => (
+					{years &&
+						years.map((year: string) => (
 							<li
 								onClick={() => setCurrentYear(year)}
 								className={`li__year ${currentYear === year ? 'li__year_active' : ''}`}
@@ -33,13 +32,10 @@ const LeftSide: React.FC<LeftSideProps> = ({ data }) => {
 						))}
 				</ul>
 				<h2> Financial Statistics </h2>
-				<IncomeStatistic
-					TargetIncome={currentDatasetByYear?.TargetIncome}
-					RealIncome={currentDatasetByYear?.RealIncome}
-				/>
+				<IncomeStatistic TargetIncome={data?.TargetIncome} RealIncome={data?.RealIncome} />
 				{/* TODO: Add opening AreaChart window on click */}
-				<AreaChart dataByMonths={currentDatasetByYear?.ByMonths} />
-				<QuantityItems items={currentDatasetByYear?.Items} />
+				<AreaChart dataByMonths={data?.ByMonths} />
+				<QuantityItems items={data?.Items} />
 			</div>
 		</aside>
 	)

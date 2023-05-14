@@ -1,7 +1,7 @@
 import React from 'react'
 import toDivide from '../../../utils/toDivide'
 
-type Items = {
+type Item = {
 	Name: string
 	Income: number
 	IncomePercentage: number
@@ -10,7 +10,7 @@ type Items = {
 }
 
 type QuantityItemsProps = {
-	items: Items[]
+	items: Item[]
 }
 
 const QuantityItems: React.FC<QuantityItemsProps> = ({ items }) => {
