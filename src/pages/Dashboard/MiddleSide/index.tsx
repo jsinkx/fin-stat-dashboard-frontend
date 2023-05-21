@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Bubblechart from './Bubblechart'
+// @ts-ignore
+import Bubblechart from './Bubblechart.tsx'
 
 type MiddleSideProps = {
 	data: any
