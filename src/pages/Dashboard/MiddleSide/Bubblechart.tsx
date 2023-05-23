@@ -33,12 +33,12 @@ const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 							className='bubble_category'
 							style={{
 								left: `${positions[index]?.bubbleCategoryX}vw`,
-								top: `${positions[index]?.bubbleCategoryY}vh`,
+								top: `${(positions[index]?.bubbleCategoryY || 10) / 2}vw`,
 								background: `linear-gradient(to right, ${
 									item.Income >= maxIncome ? 'rgba(222,17,92, 1)' : 'rgba(108,41,176, 1)'
 								}, rgba(20,17,124, 1)`,
 								width: `${6 * (1 + item.IncomePercentage / 120)}vw`,
-								height: `${12 * (1 + item.IncomePercentage / 120)}vh`,
+								height: `${6 * (1 + item.IncomePercentage / 120)}vw`,
 							}}>
 							<p>{toDivide(item.Income)}</p>
 							<p>{item.Name}</p>
@@ -48,7 +48,7 @@ const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 							className='line'
 							style={{
 								left: `${positions[index]?.bubbleCategoryLineX}vw`,
-								top: `${positions[index]?.bubbleCategoryLineY}vh`,
+								top: `${(positions[index]?.bubbleCategoryLineY || 10) / 2}vw`,
 								transform: `rotate(${positions[index]?.bubbleCategoryLineD}deg)`,
 								width: `${positions[index]?.bubbleCategoryLineW}vw`,
 							}}></div>
@@ -61,7 +61,7 @@ const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 											className='bubble_child'
 											style={{
 												left: `${positions[index]?.bubbleChildX[indexChild]}vw`,
-												top: `${positions[index]?.bubbleChildY[indexChild]}vh`,
+												top: `${(positions[index]?.bubbleChildY[indexChild] || 10) / 2}vw`,
 											}}>
 											<p className='IncomePercentage'>{itemChild?.IncomePercentage}%</p>
 											<p className='IncomeValues'>
@@ -72,7 +72,7 @@ const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 											className='line_child'
 											style={{
 												left: `${positions[index]?.bubbleChildLineX[indexChild]}vw`,
-												top: `${positions[index]?.bubbleChildLineY[indexChild]}vh`,
+												top: `${(positions[index]?.bubbleChildLineY[indexChild] || 10) / 2}vw`,
 												transform: `rotate(${positions[index]?.bubbleChildLineD[indexChild]}deg)`,
 												width: `${positions[index]?.bubbleChildLineW[indexChild]}vw`,
 											}}></div>

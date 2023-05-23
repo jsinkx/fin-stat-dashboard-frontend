@@ -8,9 +8,9 @@
 	transition: $hover-transition-default;
 
 	.bubble_centered_border {
-		top: 25.1vh;
+		top: 12.55vw;
 		left: 25.7vw;
-		padding: 5.3vw 10.6vh;
+		padding: 5.3vw;
 		border-radius: 50%;
 		position: absolute;
 		background: #9947f7; // As fallback for browsers which do not support gradient
@@ -22,8 +22,8 @@
 		position: absolute;
 		flex-direction: column;
 		width: 8vw;
-		height: 16vh;
-		top: 28vh;
+		height: 8vw;
+		top: 14vw;
 		left: 27vw;
 		text-align: center;
 		font-weight: 300;
@@ -48,38 +48,13 @@
 		}
 	}
 
-	.bubble_child {
-		width: 2.5vw;
-		height: 5vh;
-		top: 50%;
-		left: 50%;
-		border: none;
-		text-align: left;
-		background: linear-gradient(to right, #262827, #21242d);
-		position: absolute;
-		transition: $hover-transition-default;
-
-		.IncomeValues {
-			display: inline-block;
-			font-size: 0.8em;
-			width: 300%;
-			margin-top: 1.7vh;
-			margin-left: 1vw;
-		}
-
-		.IncomePercentage {
-			text-align: center;
-			margin-top: 0.85em;
-		}
-	}
-
 	.bubble_category {
 		position: absolute;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		width: 5vw;
-		height: 10vh;
+		height: 5vw;
 		align-items: center;
 		text-align: center;
 		font-weight: 500;
@@ -93,6 +68,31 @@
 			font-size: 0.8em;
 			margin: 0 auto;
 			padding: 0;
+		}
+	}
+
+	.bubble_child {
+		width: 2.5vw;
+		height: 2.5vw;
+		top: 50%;
+		left: 50%;
+		border: none;
+		text-align: left;
+		background: linear-gradient(to right, #262827, #21242d);
+		position: absolute;
+		transition: $hover-transition-default;
+
+		.IncomeValues {
+			display: inline-block;
+			font-size: 0.8em;
+			width: 300%;
+			margin-top: 0.85vw;
+			margin-left: 1vw;
+		}
+
+		.IncomePercentage {
+			text-align: center;
+			margin-top: 0.85em;
 		}
 	}
 
