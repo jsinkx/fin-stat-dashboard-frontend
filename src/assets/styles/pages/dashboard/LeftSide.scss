@@ -2,7 +2,7 @@
 
 .left-side {
 	width: 20%;
-	min-width: 330px;
+	min-width: 320px;
 
 	h4 {
 		display: inline-block;
@@ -22,6 +22,7 @@
 		margin-left: 10px;
 
 		ul {
+			width: 140%;
 			display: flex;
 			flex-wrap: wrap;
 			list-style: none;
@@ -104,7 +105,9 @@
 
 				&_name {
 					margin-left: 10px;
-					min-width: 60%;
+					width: 58%;
+					max-width: 180px;
+					height: 10px;
 				}
 
 				&_percentage {
@@ -112,7 +115,7 @@
 				}
 
 				&_value {
-					min-width: 29%;
+					min-width: 3%;
 					text-align: right;
 				}
 			}
