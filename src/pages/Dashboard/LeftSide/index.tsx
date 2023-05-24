@@ -2,7 +2,7 @@ import React from 'react'
 
 import QuantityItems from './QuantityItems'
 import IncomeStatistic from './IncomeStatistic'
-import AreaChart from './Areachart'
+import Areachart from './Areachart'
 
 type LeftSideProps = {
 	data: any
@@ -34,7 +34,7 @@ const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurren
 				<h2> Financial Statistics </h2>
 				<IncomeStatistic TargetIncome={data?.TargetIncome} RealIncome={data?.RealIncome} />
 				{/* TODO: Add opening AreaChart window on click */}
-				<AreaChart dataByMonths={data?.ByMonths} />
+				<Areachart dataByMonths={data?.ByMonths} />
 				<QuantityItems items={data?.Items} />
 			</div>
 		</aside>

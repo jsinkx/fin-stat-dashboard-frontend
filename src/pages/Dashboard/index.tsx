@@ -1,7 +1,7 @@
 import React from 'react'
 
-import LeftSide from './LeftSide'
 import MiddleSide from './MiddleSide'
+import LeftSide from './LeftSide'
 import RightSide from './RightSide'
 
 import exampleData from '../../assets/data/example_data.json'
