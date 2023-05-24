@@ -1,8 +1,9 @@
 import React from 'react'
 
+// @ts-ignore
+import Areachart from './Areachart'
 import QuantityItems from './QuantityItems'
 import IncomeStatistic from './IncomeStatistic'
-import Areachart from './Areachart'
 
 type LeftSideProps = {
 	data: any
