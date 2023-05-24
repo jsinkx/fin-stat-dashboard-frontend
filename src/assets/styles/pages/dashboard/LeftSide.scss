@@ -32,11 +32,11 @@
 			user-select: none;
 
 			.li__year {
-				text-align: left;
+				text-align: center;
 				padding: 4px 10px;
 				margin-right: 10px;
 				background-color: $dark-extra-blue;
-				width: 46px;
+				width: 32px;
 				cursor: pointer;
 				transition: $click-transition-default;
 
