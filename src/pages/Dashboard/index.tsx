@@ -1,7 +1,8 @@
 import React from 'react'
 
-import MiddleSide from './MiddleSide'
+// @ts-ignore
 import LeftSide from './LeftSide'
+import MiddleSide from './MiddleSide'
 import RightSide from './RightSide'
 
 import exampleData from '../../assets/data/example_data.json'
