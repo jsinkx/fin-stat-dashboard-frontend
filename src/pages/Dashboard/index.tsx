@@ -1,6 +1,5 @@
 import React from 'react'
 
-// @ts-ignore
 import LeftSide from './LeftSide'
 import MiddleSide from './MiddleSide'
 import RightSide from './RightSide'

@@ -53,12 +53,11 @@ const options = {
 		},
 	},
 }
-
-type AreachartProps = {
+type AreaChartProps = {
 	dataByMonths: { [key: string]: number }
 }
 
-const Areachart: React.FC<AreachartProps> = ({ dataByMonths }) => {
+const AreaChart: React.FC<AreaChartProps> = ({ dataByMonths }) => {
 	const chartRef = React.useRef<ChartJS>(null)
 	const [chartData, setChartData] = React.useState<any>({
 		datasets: [],
@@ -101,4 +100,4 @@ const Areachart: React.FC<AreachartProps> = ({ dataByMonths }) => {
 	return <Chart ref={chartRef} type='line' options={options} data={chartData} />
 }
 
-export default Areachart
+export default AreaChart
