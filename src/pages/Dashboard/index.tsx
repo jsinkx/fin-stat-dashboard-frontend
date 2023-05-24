@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Left from './Left'
+import LeftSide from './LeftSide'
 import MiddleSide from './MiddleSide'
 import RightSide from './RightSide'
 
@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
 
 	return (
 		<div className='content'>
-			<Left data={currentDatasetByYear} years={data?.Years} {...{ currentYear, setCurrentYear }} />
+			<LeftSide data={currentDatasetByYear} years={data?.Years} {...{ currentYear, setCurrentYear }} />
 			<MiddleSide data={currentDatasetByYear} />
 			<RightSide data={currentDatasetByYear} />
 		</div>
