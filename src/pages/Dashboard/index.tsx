@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LeftSide from './LeftSide'
+import LeftSide from './LeftSide/index'
 import MiddleSide from './MiddleSide'
 import RightSide from './RightSide'
 
