@@ -46,7 +46,7 @@ const Barchart: React.FC<BarchartProps> = ({ dataByMonths }) => {
 		datasets: [
 			{
 				data: labels.map((month) => dataByMonths[month]),
-				backgroundColor: 'rgba(255, 99, 132, 0.5)',
+				backgroundColor: 'rgba(255, 99, 132, 0.78)',
 			},
 		],
 	}

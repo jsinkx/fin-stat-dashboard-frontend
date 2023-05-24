@@ -31,7 +31,7 @@ const Doughnutchart: React.FC<DoughnutchartProps> = ({ marketingData }) => {
 		datasets: [
 			{
 				data: [marketingData.B2B[1], marketingData.B2C[1]],
-				borderColor: [colors.DARK_BLUE_ACTIVE, '#833856'],
+				borderColor: [colors.DARK_BLUE_ACTIVE, colors.EXTRA_LIGHT_BLUE],
 				borderWidth: 5,
 				borderRadius: 10,
 				cutout: '85%',

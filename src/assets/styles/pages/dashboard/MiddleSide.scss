@@ -6,9 +6,14 @@
 	width: 100%;
 	position: relative;
 	transition: $hover-transition-default;
+	margin-top: -20px;
+
+	::selection {
+		background-color: #c8506fff;
+	}
 
 	.bubble_centered_border {
-		top: 12.55vw;
+		top: 12.7vw;
 		left: 25.7vw;
 		padding: 5.3vw;
 		border-radius: 50%;
@@ -25,13 +30,13 @@
 		height: 8vw;
 		top: 14vw;
 		left: 27vw;
+		font-size: 0.9vw;
 		text-align: center;
 		font-weight: 300;
 		border-radius: 50%;
 		box-sizing: border-box;
 		background-color: black;
 		transition: $hover-transition-default;
-		cursor: default;
 		user-select: none;
 		z-index: 9999;
 
@@ -48,6 +53,19 @@
 		}
 	}
 
+	.bubble_centered {
+		img {
+			width: 1.7vw;
+			user-select: none;
+			margin-bottom: -0.7vw;
+			pointer-events: none;
+		}
+
+		h3 {
+			margin: 0;
+		}
+	}
+
 	.bubble_category {
 		position: absolute;
 		display: flex;
@@ -57,8 +75,9 @@
 		height: 5vw;
 		align-items: center;
 		text-align: center;
-		font-weight: 500;
-		font-size: 1em;
+		font-weight: 400;
+		//font-size: 1.2em;
+		font-size: 1vw;
 		border-radius: 50%;
 		box-sizing: border-box;
 		transition: $hover-transition-default;
@@ -86,8 +105,9 @@
 			display: inline-block;
 			font-size: 0.8em;
 			width: 300%;
-			margin-top: 0.85vw;
+			margin-top: 1vw;
 			margin-left: 1vw;
+			user-select: all;
 		}
 
 		.IncomePercentage {

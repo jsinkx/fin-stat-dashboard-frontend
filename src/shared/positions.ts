@@ -65,9 +65,9 @@ const positions: PositionsType[] = [
 		bubbleCategoryLineD: 100,
 		bubbleChildX: [22, 34, 28.5],
 		bubbleChildY: [73, 73, 78],
-		bubbleChildLineX: [23, 30, 25.5],
-		bubbleChildLineY: [70, 72.5, 71],
-		bubbleChildLineW: [7, 7, 8],
+		bubbleChildLineX: [23, 27, 25.5],
+		bubbleChildLineY: [70, 69, 71],
+		bubbleChildLineW: [7, 9, 8],
 		bubbleChildLineD: [140, -140, 87],
 	},
 	{

@@ -12,13 +12,11 @@ type RightSideProps = {
 }
 
 const RightSide: React.FC<RightSideProps> = ({ data }) => {
-	console.log(data)
-
 	return (
 		<article className='right-side'>
 			<div className='block block-avg'>
 				<img src={avgIcon} alt='avg icon' />
-				<h2>{toDivide(data.AverageIncome)}</h2>
+				<h2 className='value'>{toDivide(data.AverageIncome)}</h2>
 				<p> Average </p>
 				<p>
 					<span>Monthly income</span>
@@ -33,15 +31,17 @@ const RightSide: React.FC<RightSideProps> = ({ data }) => {
 
 				<Barchart dataByMonths={data.OperatingProfits.ByMonths} />
 
-				<p>{toDivide(data.OperatingProfits.Total)}</p>
+				<p className='value'>{toDivide(data.OperatingProfits.Total)}</p>
 			</div>
 			<div className='block block-marketing'>
 				<h2>B2B</h2>
-				<p>{toDivide(data.MarketingStrategies.B2B[0])}</p>
+				<p className='value'>{toDivide(data.MarketingStrategies.B2B[0])}</p>
 				<p>{data.MarketingStrategies.B2B[1]}%</p>
-				<Doughnutchart marketingData={data.MarketingStrategies} />
+				<div className='chart'>
+					<Doughnutchart marketingData={data.MarketingStrategies} />
+				</div>
 				<p>{data.MarketingStrategies.B2C[1]}%</p>
-				<p>{toDivide(data.MarketingStrategies.B2C[0])}</p>
+				<p className='value'>{toDivide(data.MarketingStrategies.B2C[0])}</p>
 				<h2>B2C</h2>
 			</div>
 		</article>

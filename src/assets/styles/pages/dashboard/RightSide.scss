@@ -7,6 +7,10 @@
 	user-select: none;
 	padding: 0;
 
+	.value {
+		user-select: all;
+	}
+
 	.block {
 		margin-top: 12px;
 		background-color: #060f28;
@@ -64,6 +68,13 @@
 			p {
 				font-size: 1.3em;
 				font-weight: 500;
+			}
+		}
+
+		&-marketing {
+			.chart {
+				width: 80%;
+				margin: 10px auto;
 			}
 		}
 	}
