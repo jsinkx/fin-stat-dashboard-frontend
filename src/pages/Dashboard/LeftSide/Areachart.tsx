@@ -17,6 +17,20 @@ import colors from '../../../shared/colors'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
 
+function createGradient(ctx: CanvasRenderingContext2D, area: ChartArea) {
+	const colorStart = 'rgba(9,31,115, 1)'
+	const colorMid = 'rgba(9,31,115, 0.8)'
+	const colorEnd = 'rgba(9,31,115, 0.2)'
+
+	const gradient = ctx.createLinearGradient(0, area.bottom, 0, area.top)
+
+	gradient.addColorStop(1, colorStart)
+	gradient.addColorStop(0.4, colorMid)
+	gradient.addColorStop(0.1, colorEnd)
+
+	return gradient
+}
+
 const options = {
 	responsive: true,
 	events: [],
@@ -40,25 +54,11 @@ const options = {
 	},
 }
 
-type AreaChartProps = {
+type AreachartProps = {
 	dataByMonths: { [key: string]: number }
 }
 
-function createGradient(ctx: CanvasRenderingContext2D, area: ChartArea) {
-	const colorStart = 'rgba(9,31,115, 1)'
-	const colorMid = 'rgba(9,31,115, 0.8)'
-	const colorEnd = 'rgba(9,31,115, 0.2)'
-
-	const gradient = ctx.createLinearGradient(0, area.bottom, 0, area.top)
-
-	gradient.addColorStop(1, colorStart)
-	gradient.addColorStop(0.4, colorMid)
-	gradient.addColorStop(0.1, colorEnd)
-
-	return gradient
-}
-
-const AreaChart: React.FC<AreaChartProps> = ({ dataByMonths }) => {
+const Areachart: React.FC<AreachartProps> = ({ dataByMonths }) => {
 	const chartRef = React.useRef<ChartJS>(null)
 	const [chartData, setChartData] = React.useState<any>({
 		datasets: [],
@@ -101,4 +101,4 @@ const AreaChart: React.FC<AreaChartProps> = ({ dataByMonths }) => {
 	return <Chart ref={chartRef} type='line' options={options} data={chartData} />
 }
 
-export default AreaChart
+export default Areachart
