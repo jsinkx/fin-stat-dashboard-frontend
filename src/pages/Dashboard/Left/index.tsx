@@ -11,7 +11,7 @@ type LeftSideProps = {
 	setCurrentYear: React.Dispatch<React.SetStateAction<string>>
 }
 
-const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurrentYear }) => {
+const Left: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurrentYear }) => {
 	return (
 		<aside className='left-side'>
 			<h4> Income Source </h4>
@@ -41,4 +41,4 @@ const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurren
 	)
 }
 
-export default LeftSide
+export default Left
