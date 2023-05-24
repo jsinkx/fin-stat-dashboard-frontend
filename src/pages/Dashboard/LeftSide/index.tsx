@@ -14,7 +14,7 @@ type LeftSideProps = {
 const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurrentYear }) => {
 	return (
 		<aside className='left-side'>
-			<h4> Income Source </h4>
+			<h4> Income Sources </h4>
 			<p>
 				Grand total of income, and their breakdowns showing the achievements percentage and highlight for most
 				valuable source, Marketing strategies, and operating profit.
