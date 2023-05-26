@@ -13,9 +13,9 @@
 	}
 
 	.bubble_centered_border {
-		top: 12.7vw;
-		left: 25.7vw;
-		padding: 5.3vw;
+		top: 12.5vw;
+		left: 25.5vw;
+		padding: 5.8vw;
 		border-radius: 50%;
 		position: absolute;
 		background: #9947f7; // As fallback for browsers which do not support gradient
@@ -26,8 +26,8 @@
 	.bubble_child {
 		position: absolute;
 		flex-direction: column;
-		width: 8vw;
-		height: 8vw;
+		width: 8.5vw;
+		height: 8.5vw;
 		top: 14vw;
 		left: 27vw;
 		font-size: 0.9vw;
@@ -49,14 +49,18 @@
 
 		p {
 			margin: 0;
+			font-weight: 400;
 			font-size: 1em;
 		}
 	}
 
 	.bubble_centered {
+		padding-top: 0.5vw;
+
 		img {
 			width: 1.7vw;
 			user-select: none;
+			//margin-top: 1.4vw
 			margin-bottom: -0.7vw;
 			pointer-events: none;
 		}
@@ -109,6 +113,7 @@
 			margin-top: 1vw;
 			margin-left: 1vw;
 			user-select: all;
+			font-weight: 400;
 		}
 
 		.IncomePercentage {
