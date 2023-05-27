@@ -29,6 +29,8 @@
 			img {
 				width: 30%;
 				margin: 8px 0 -10px 8px;
+				user-select: none;
+				pointer-events: none;
 			}
 
 			h2,
@@ -50,8 +52,6 @@
 		}
 
 		&-profit {
-			//height: 500px;
-			//height: 50%;
 			min-height: 330px;
 			padding-bottom: 8px;
 
