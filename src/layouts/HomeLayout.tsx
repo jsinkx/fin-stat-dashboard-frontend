@@ -5,7 +5,7 @@ const HomeLayout: React.FC = () => {
 	return (
 		<>
 			<header className='header_home'>
-				<h1>Financial Statistic Dashboard</h1>
+				<h1>Financial Statistics Dashboard</h1>
 			</header>
 			<main className='main_home'>
 				<Outlet />
