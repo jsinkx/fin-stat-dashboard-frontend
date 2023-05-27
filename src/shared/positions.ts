@@ -57,7 +57,7 @@ const positions: PositionsType[] = [
 		bubbleChildLineD: [30, -6],
 	},
 	{
-		bubbleCategoryX: 26,
+		bubbleCategoryX: 26.76,
 		bubbleCategoryY: 58,
 		bubbleCategoryLineX: 25,
 		bubbleCategoryLineY: 50,
