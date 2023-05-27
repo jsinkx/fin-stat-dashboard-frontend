@@ -6,6 +6,7 @@ import MiddleSide from './MiddleSide'
 import RightSide from './RightSide'
 
 import Loading from '../../components/Loading'
+import Modal from '../../components/Modal'
 
 import exampleData from '../../assets/data/example_data.json'
 
@@ -14,6 +15,8 @@ import { selectDatasetData, selectDatasetStatus } from '../../redux/slices/datas
 
 import Status from '../../shared/status'
 
+import ModalContext from '../../components/Modal/ModalContext'
+
 import '../../assets/styles/pages/dashboard/Dashboard.scss'
 
 const Dashboard: React.FC = () => {
@@ -21,7 +24,11 @@ const Dashboard: React.FC = () => {
 	const status = useAppSelector(selectDatasetStatus)
 
 	const { pathname } = useLocation()
+
 	const isLoaded = status === Status.LOADED
+
+	const [isOpen, setIsOpen] = React.useState<boolean>(false)
+	const [modalChildComponent, setModalChildComponent] = React.useState<React.ReactNode>(<></>)
 
 	const [data, setData] = React.useState<any>(exampleData)
 	const [currentYear, setCurrentYear] = React.useState<string>(data?.Years[0] as string)
@@ -41,9 +48,18 @@ const Dashboard: React.FC = () => {
 		<Loading />
 	) : (
 		<div className='content'>
-			<LeftSide data={currentDatasetByYear} years={data?.Years} {...{ currentYear, setCurrentYear }} />
-			<MiddleSide data={currentDatasetByYear} />
-			<RightSide data={currentDatasetByYear} />
+			{isOpen && <Modal setIsOpen={setIsOpen}>{modalChildComponent}</Modal>}
+			<ModalContext.Provider
+				value={{
+					isOpen: isOpen,
+					setIsOpen,
+					modalChildComponent,
+					setModalChildComponent,
+				}}>
+				<LeftSide data={currentDatasetByYear} years={data?.Years} {...{ currentYear, setCurrentYear }} />
+				<MiddleSide data={currentDatasetByYear} />
+				<RightSide data={currentDatasetByYear} />
+			</ModalContext.Provider>
 		</div>
 	)
 }

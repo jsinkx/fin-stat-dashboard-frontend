@@ -1,8 +1,10 @@
 import React from 'react'
 
-import AreaChart from './AreaChart'
+import Areachart from './Areachart'
 import QuantityItems from './QuantityItems'
 import IncomeStatistic from './IncomeStatistic'
+
+import ModalContext from '../../../components/Modal/ModalContext'
 
 type LeftSideProps = {
 	data: any
@@ -12,6 +14,13 @@ type LeftSideProps = {
 }
 
 const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurrentYear }) => {
+	const { setIsOpen, setModalChildComponent } = React.useContext(ModalContext)
+
+	const handleClickAreachart = () => {
+		setModalChildComponent(<Areachart isInsideModal={true} dataByMonths={data?.ByMonths} />)
+		setIsOpen(true)
+	}
+
 	return (
 		<aside className='left-side'>
 			<h4> Income Sources </h4>
@@ -33,8 +42,7 @@ const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurren
 				</ul>
 				<h2> Financial Statistics </h2>
 				<IncomeStatistic TargetIncome={data?.TargetIncome} RealIncome={data?.RealIncome} />
-				{/* TODO: Add opening AreaChart window on click */}
-				<AreaChart dataByMonths={data?.ByMonths} />
+				<Areachart onClick={handleClickAreachart} dataByMonths={data?.ByMonths} />
 				<QuantityItems items={data?.Items} />
 			</div>
 		</aside>

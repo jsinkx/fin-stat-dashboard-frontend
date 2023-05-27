@@ -1,0 +1,54 @@
+@import '../../assets/styles/modules/index.scss';
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	place-items: center;
+	background-color: #0000007c;
+	backdrop-filter: blur(2px);
+	z-index: 999999;
+	user-select: none;
+
+	&_window {
+		padding: 1vw;
+		padding-top: 0.5vw;
+		background-color: $dark-extra-blue;
+		width: 50vw;
+		margin: 10vw auto;
+
+		header {
+			margin: 0.5vw;
+
+			button {
+				float: right;
+				width: 2.5vw;
+				height: 2.5vw;
+				background: none;
+				color: inherit;
+				border: none;
+				padding: 0;
+				font: inherit;
+				cursor: pointer;
+				outline: inherit;
+				padding: 0;
+
+				img {
+					width: 100%;
+				}
+
+				:hover {
+					opacity: 0.6;
+				}
+			}
+		}
+
+		.chart {
+			width: 30%;
+			height: 30%;
+			border: 1px solid red;
+		}
+	}
+}

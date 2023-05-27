@@ -30,6 +30,7 @@ import {
 import { Chart } from 'react-chartjs-2'
 
 import colors from '../../../shared/colors'
+import Colors from '../../../shared/colors'
 
 ChartJS.register(...registerablesJS)
 ChartJS.register(
@@ -86,11 +87,42 @@ const options = {
 		},
 	},
 }
-type AreaChartProps = {
-	dataByMonths: { [key: string]: number }
+
+// This options using if chart inside modal window
+const optionsForInsideModal = {
+	responsive: true,
+	plugins: {
+		legend: {
+			display: false,
+		},
+		title: {
+			display: true,
+			text: 'Incomes',
+			color: colors.MILK,
+			font: {
+				size: 18,
+			},
+		},
+	},
+	scales: {
+		y: {
+			ticks: { color: colors.MILK },
+		},
+		x: {
+			ticks: {
+				color: colors.MILK,
+			},
+		},
+	},
 }
 
-const AreaChart: React.FC<AreaChartProps> = ({ dataByMonths }) => {
+type AreachartProps = {
+	dataByMonths: { [key: string]: number }
+	onClick?: () => void
+	isInsideModal?: boolean
+}
+
+const Areachart: React.FC<AreachartProps> = ({ dataByMonths, onClick, isInsideModal }) => {
 	const chartRef = React.useRef<ChartJS>(null)
 	const [chartData, setChartData] = React.useState<any>({
 		datasets: [],
@@ -104,7 +136,9 @@ const AreaChart: React.FC<AreaChartProps> = ({ dataByMonths }) => {
 			{
 				fill: true,
 				data: labels.map((month) => dataByMonths[month]),
-				pointRadius: -1,
+				color: isInsideModal ? 'red' : 'none',
+				pointRadius: isInsideModal ? 4 : -1,
+				pointBackgroundColor: Colors.DARK_BLUE_ACTIVE,
 			},
 		],
 	}
@@ -130,7 +164,18 @@ const AreaChart: React.FC<AreaChartProps> = ({ dataByMonths }) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [dataByMonths])
 
-	return <Chart ref={chartRef} options={options} data={chartData} type={'line'} />
+	return (
+		<Chart
+			onClick={onClick}
+			style={{
+				cursor: isInsideModal ? 'default' : 'pointer',
+			}}
+			ref={chartRef}
+			options={isInsideModal ? optionsForInsideModal : options}
+			data={chartData}
+			type={'line'}
+		/>
+	)
 }
 
-export default AreaChart
+export default Areachart
