@@ -1,0 +1,143 @@
+@import './../modules/index.scss';
+
+.header_home {
+	user-select: none;
+
+	h1 {
+		position: relative;
+		display: inline-block;
+		left: 0;
+		margin-top: 0.95vw;
+		font-size: 4vw;
+		text-align: center;
+		color: d40f56;
+		background: linear-gradient(80deg, #e7236b 20%, #a257a6 40%, #5a5cc7 60%, #a257a6 80%, #e7236b 100%);
+		background-size: 200% auto;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine 4s linear infinite;
+
+		@keyframes shine {
+			to {
+				background-position: 200% center;
+			}
+		}
+	}
+}
+
+.main_home {
+	margin-top: 0 !important;
+
+	nav {
+		display: flex;
+		justify-content: space-around;
+		user-select: none;
+
+		.upload-file__block {
+			display: flex;
+			flex-direction: column;
+
+			img {
+				width: 20vw;
+				height: 20vw;
+				margin: 0 auto;
+				user-select: none;
+				pointer-events: none;
+			}
+
+			&_action {
+				transition: all 0.3s linear;
+				h2 {
+					font-size: 2.3vw;
+				}
+
+				.input-file {
+					position: relative;
+					display: flex;
+				}
+
+				.input-file span {
+					position: relative;
+					display: inline-block;
+					height: 3vw;
+					width: 17vw;
+					padding: 0.5vw 1vw;
+					margin: 0 auto;
+					outline: none;
+					text-decoration: none;
+					vertical-align: middle;
+					color: $milk;
+					font-size: 1.3vw;
+					text-align: center;
+					background-color: #2e51f9;
+					box-sizing: border-box;
+					border-radius: 4px;
+					border: none;
+					transition: $hover-transition-default;
+					cursor: pointer;
+				}
+
+				.input-file input[type='file'] {
+					position: absolute;
+					z-index: -1;
+					opacity: 0;
+					display: block;
+					width: 0;
+					height: 0;
+				}
+
+				.input-file input[type='file']:focus + span {
+					box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+				}
+
+				.input-file:hover span {
+					background-color: #3c5ef6;
+				}
+				.input-file:active span {
+					background-color: #506ef6;
+				}
+			}
+		}
+
+		.example-data__block {
+			display: flex;
+			flex-direction: column;
+
+			img {
+				width: 20vw;
+				height: 20vw;
+				margin: 0 auto;
+				user-select: none;
+				pointer-events: none;
+			}
+
+			h2 {
+				margin-inline: auto;
+				font-size: 2.3vw;
+			}
+
+			a {
+				width: 17vw;
+				height: 3vw;
+				margin: 0 auto;
+				margin-bottom: 1.5vw;
+				padding: 0.5vw 1vw;
+				outline: none;
+				text-decoration: none;
+				color: $milk;
+				text-align: center;
+				font-size: 1.3vw;
+				border-radius: 4px;
+				background-color: #2e51f9;
+				box-sizing: border-box;
+				vertical-align: middle;
+				transition: $hover-transition-default;
+
+				&:hover {
+					background-color: #506ef6;
+				}
+			}
+		}
+	}
+}
