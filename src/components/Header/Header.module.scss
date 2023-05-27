@@ -1,6 +1,9 @@
 @import '../../assets/styles/modules/index.scss';
 
-header {
+a {
+}
+
+.header_default {
 	display: flex;
 	align-items: center;
 	padding-top: 5px;
@@ -8,20 +11,47 @@ header {
 	box-sizing: border-box;
 	user-select: none;
 
-	img {
-		margin-inline: 30px 15px;
-		width: 28px;
-		height: 28px;
-		-webkit-user-drag: none;
-	}
+	a {
+		display: flex;
+		align-items: center;
+		outline: none;
+		text-decoration: none;
 
-	h1 {
-		font-size: 1em;
-		font-weight: 400;
-		color: $milk;
+		div {
+			display: flex;
+			align-items: center;
+
+			img {
+				margin-inline: 30px 15px;
+				width: 28px;
+				height: 28px;
+				-webkit-user-drag: none;
+				transition: $hover-transition-default;
+			}
+
+			h1 {
+				font-size: 1em;
+				font-weight: 400;
+				color: $milk;
+				transition: $hover-transition-default;
+			}
+
+			&:hover {
+				color: $grey-hover;
+
+				img {
+					filter: brightness(60%);
+				}
+
+				h1 {
+					color: $grey-hover;
+				}
+			}
+		}
 	}
 
 	.ul_right {
+		display: flex;
 		padding: 0;
 		margin: 0;
 		margin-left: auto;
@@ -29,19 +59,25 @@ header {
 		list-style: none;
 
 		a {
+			margin-right: 20px;
 			font-size: 0.95em;
 			color: $milk;
-			transition: $hover-transition-default;
+			outline: none;
+			text-decoration: none;
+			padding-bottom: 5px;
+
+			li {
+				transition: $hover-transition-default;
+			}
 
 			&:hover {
-				color: $milk-hover;
+				color: $grey-hover;
 			}
 		}
 
 		.active {
-			text-decoration-color: $dark-blue-active;
-			text-underline-offset: 7px;
-			text-decoration-thickness: 4px;
+			border-bottom: 3px solid $dark-blue-active;
+			// transition: none;
 		}
 	}
 }
