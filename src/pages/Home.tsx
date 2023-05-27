@@ -20,8 +20,8 @@ const Home: React.FC = () => {
 
 	const navigate = useNavigate()
 
-	const handleFileChange = (event: any) => {
-		const file = event.target.files[0]
+	const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+		const file = (event.target.files as FileList)[0]
 		if (
 			file !== undefined &&
 			(file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ||
@@ -32,6 +32,8 @@ const Home: React.FC = () => {
 			formData.append('file', file as Blob)
 
 			dispatch(fetchDataset(formData))
+				.unwrap()
+				.catch((_) => notify(false, 'Something went wrong'))
 
 			navigate('/dashboard/uploaded')
 		} else {
