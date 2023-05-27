@@ -56,9 +56,10 @@ const Doughnutchart: React.FC<DoughnutchartProps> = ({ marketingData, onClick, i
 				data: [marketingData.B2B[1], marketingData.B2C[1]],
 				label: ' Percentage ',
 				borderColor: [colors.DARK_BLUE_ACTIVE, colors.EXTRA_LIGHT_BLUE],
+				backgroundColor: isInsideModal ? [colors.DARK_BLUE_ACTIVE, colors.EXTRA_LIGHT_BLUE] : '',
 				borderWidth: 5,
-				borderRadius: 10,
-				cutout: '85%',
+				borderRadius: isInsideModal ? 8 : 4,
+				cutout: isInsideModal ? '60%' : '85%',
 			},
 		],
 	}
