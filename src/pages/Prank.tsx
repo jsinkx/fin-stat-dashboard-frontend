@@ -1,10 +1,14 @@
 import React from 'react'
 
-import '../assets/styles/pages/prank.scss'
-import dashboardPicture from '../assets/images/dashboard.png'
+import dashboardPic from '../assets/images/dashboard.png'
+import '../assets/styles/pages/Prank.scss'
 
 const Prank: React.FC = () => {
-	return <img className='img_dashboard' src={dashboardPicture} alt='prank' />
+	return (
+		<div className='div_prank'>
+			<img className='img_dashboard' src={dashboardPic} alt='prank' />
+		</div>
+	)
 }
 
 export default Prank

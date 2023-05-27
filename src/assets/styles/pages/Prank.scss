@@ -1,0 +1,15 @@
+.div_prank {
+	position: absolute;
+	width: 100%;
+	top: -1.09vw;
+	left: -2.5vw;
+	overflow: hidden;
+	z-index: 11111;
+	margin: 0 auto;
+
+	.img_dashboard {
+		width: 105vw;
+		user-select: none;
+		-webkit-user-drag: none;
+	}
+}
