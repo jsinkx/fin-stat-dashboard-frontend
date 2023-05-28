@@ -21,7 +21,7 @@ yarn install
 - To test dashboard, you can download [example data](https://althgamer.ru/storage/example-data.xlsx) or [extended example data](https://althgamer.ru/storage/example-data-updated.xlsx)
 - And upload on `home page`
 - For a detailed review, you can open area chart or bar chart
-Also if too much data in bubble chart, you can expand by group bubble (named "...") 
+- Also if too much data in bubble chart, you can expand by group bubble (named "...") 
 
 ## Mode development
 `npm start` 
