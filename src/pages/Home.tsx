@@ -6,9 +6,9 @@ import analyticsPic from '../assets/images/Sales Analytics.png'
 
 import Status from '../shared/status'
 import useAppSelector from '../hooks/useAppSelector'
+import useAppDispatch from '../hooks/useAppDispatch'
 import { selectDatasetStatus } from '../redux/slices/dataset/selectors'
 import { fetchDataset } from '../redux/slices/dataset/slice'
-import useAppDispatch from '../hooks/useAppDispatch'
 
 import notify from '../utils/notify'
 

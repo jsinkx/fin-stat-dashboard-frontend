@@ -4,6 +4,8 @@ import { Bar } from 'react-chartjs-2'
 
 import Colors from '../../../shared/colors'
 
+import type { DataByMonths } from '../../../redux/slices/dataset/types'
+
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const options = {
@@ -65,7 +67,7 @@ const optionsForInsideModal = {
 }
 
 type BarchartProps = {
-	dataByMonths: { [key: string]: number }
+	dataByMonths: DataByMonths
 	isInsideModal?: boolean
 	onClick?: () => void
 }

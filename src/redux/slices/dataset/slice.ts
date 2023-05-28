@@ -3,14 +3,14 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import Status from '../../../shared/status'
 import axios from '../../../axios'
 
-import type { DatasetThunk } from './types'
+import type { Data, DatasetThunk, IDatasetState } from './types'
 
-export const fetchDataset = createAsyncThunk<any, DatasetThunk>('dataset/Load', async (params) => {
+export const fetchDataset = createAsyncThunk<Data, DatasetThunk>('dataset/Load', async (params) => {
 	const { data } = await axios.post('/excel', params)
 	return data
 })
 
-const initialState: any = {
+const initialState: IDatasetState = {
 	data: null,
 	status: Status.UNSET,
 }

@@ -4,6 +4,8 @@ import { Doughnut } from 'react-chartjs-2'
 
 import Colors from '../../../shared/colors'
 
+import type { MarketingData } from '../../../redux/slices/dataset/types'
+
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 const options = {
@@ -20,10 +22,7 @@ const options = {
 }
 
 type DoughnutchartProps = {
-	marketingData: {
-		B2B: [number, number]
-		B2C: [number, number]
-	}
+	marketingData: MarketingData
 }
 
 const Doughnutchart: React.FC<DoughnutchartProps> = ({ marketingData }) => {

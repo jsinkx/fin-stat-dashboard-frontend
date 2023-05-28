@@ -1,11 +1,13 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
-import logo from '../../assets/images/milk-logo.png'
-import classes from './Header.module.scss'
+import Status from '../../shared/status'
 import useAppSelector from '../../hooks/useAppSelector'
 import { selectDatasetStatus } from '../../redux/slices/dataset/selectors'
-import Status from '../../shared/status'
+
+import logo from '../../assets/images/milk-logo.png'
+
+import classes from './Header.module.scss'
 
 const Header: React.FC = () => {
 	const status = useAppSelector(selectDatasetStatus)

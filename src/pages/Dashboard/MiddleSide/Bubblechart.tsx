@@ -12,18 +12,12 @@ import ModalContext from '../../../components/Modal/ModalContext'
 
 import toDivide from '../../../utils/toDivide'
 
-type Item = {
-	Name: string
-	Income: number
-	IncomePercentage: number
-	IncomeBreakdowns: Item[]
-}
+import type { Dataset, Item, ItemChild } from '../../../redux/slices/dataset/types'
 
 type BubblechartProps = {
-	data: any
+	data: Dataset
 }
 
-// This chart ONLY for static (example) data
 const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 	const { setIsOpen, setModalChildComponent } = React.useContext(ModalContext)
 
@@ -117,7 +111,7 @@ const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 						<React.Fragment key={item.Name}>
 							<BubbleCategory {...{ index, item, maxIncome }} />
 							{item.IncomeBreakdowns &&
-								item?.IncomeBreakdowns.map((itemChild: Item, indexChild: number) => {
+								item?.IncomeBreakdowns.map((itemChild: ItemChild, indexChild: number) => {
 									if (indexChild + 1 === positions[index]?.bubbleChildX.length) {
 										return (
 											<BubbleChild

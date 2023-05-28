@@ -4,17 +4,12 @@ import positions from '../../../shared/positions'
 
 import toDivide from '../../../utils/toDivide'
 
-type Item = {
-	Name: string
-	Income: number
-	IncomePercentage: number
-	IncomeBreakdowns?: Item[]
-}
+import type { ItemChild } from '../../../redux/slices/dataset/types'
 
 type BubbleChildProps = {
 	index: number
 	indexChild: number
-	itemChild: Item
+	itemChild: ItemChild
 	isGroupBubble?: boolean
 	onClick?: () => void
 }

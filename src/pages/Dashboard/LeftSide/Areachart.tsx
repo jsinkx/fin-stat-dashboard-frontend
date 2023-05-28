@@ -1,17 +1,4 @@
 import React from 'react'
-// import {
-// 	Chart as ChartJS,
-// 	CategoryScale,
-// 	LinearScale,
-// 	PointElement,
-// 	LineElement,
-// 	Title,
-// 	Tooltip,
-// 	Filler,
-// 	Legend,
-// 	ChartArea,
-// } from 'chart.js'
-// import { Chart } from 'react-chartjs-2'
 
 import {
 	Chart as ChartJS,
@@ -29,8 +16,8 @@ import {
 } from 'chart.js'
 import { Chart } from 'react-chartjs-2'
 
-import colors from '../../../shared/colors'
 import Colors from '../../../shared/colors'
+import { DataByMonths } from '../../../redux/slices/dataset/types'
 
 ChartJS.register(...registerablesJS)
 ChartJS.register(
@@ -82,7 +69,7 @@ const options = {
 		},
 		x: {
 			ticks: {
-				color: colors.MILK,
+				color: Colors.MILK,
 			},
 		},
 	},
@@ -98,7 +85,7 @@ const optionsForInsideModal = {
 		title: {
 			display: true,
 			text: 'Incomes',
-			color: colors.MILK,
+			color: Colors.MILK,
 			font: {
 				size: 18,
 			},
@@ -106,18 +93,18 @@ const optionsForInsideModal = {
 	},
 	scales: {
 		y: {
-			ticks: { color: colors.MILK },
+			ticks: { color: Colors.MILK },
 		},
 		x: {
 			ticks: {
-				color: colors.MILK,
+				color: Colors.MILK,
 			},
 		},
 	},
 }
 
 type AreachartProps = {
-	dataByMonths: { [key: string]: number }
+	dataByMonths: DataByMonths
 	onClick?: () => void
 	isInsideModal?: boolean
 }
@@ -155,7 +142,7 @@ const Areachart: React.FC<AreachartProps> = ({ dataByMonths, onClick, isInsideMo
 			fill: true,
 			datasets: data.datasets.map((dataset) => ({
 				...dataset,
-				borderColor: colors.DARK_BLUE_ACTIVE,
+				borderColor: Colors.DARK_BLUE_ACTIVE,
 				backgroundColor: createGradient(chart.ctx, chart.chartArea),
 			})),
 		}

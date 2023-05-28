@@ -5,12 +5,13 @@ import IncomeStatistic from './IncomeStatistic'
 
 import UnitedList from '../../../components/UnitedList'
 import ModalContext from '../../../components/Modal/ModalContext'
+import { Dataset } from '../../../redux/slices/dataset/types'
 
 type LeftSideProps = {
-	data: any
-	years: string[]
-	currentYear: string
-	setCurrentYear: React.Dispatch<React.SetStateAction<string>>
+	data: Dataset
+	years: number[] | string[]
+	currentYear: number | string
+	setCurrentYear: React.Dispatch<React.SetStateAction<number | string>>
 }
 
 const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurrentYear }) => {
@@ -31,7 +32,7 @@ const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurren
 			<div>
 				<ul>
 					{years &&
-						years.map((year: string) => (
+						years.map((year: string | number) => (
 							<li
 								onClick={() => setCurrentYear(year)}
 								className={`li__year ${currentYear === year ? 'li__year_active' : ''}`}

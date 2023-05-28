@@ -2,19 +2,13 @@ import React from 'react'
 
 import toDivide from '../../utils/toDivide'
 
-import classes from './UnitedList.module.scss'
+import type { ItemChild } from '../../redux/slices/dataset/types'
 
-type Item = {
-	Name: string
-	Income: number
-	IncomePercentage: number
-	Quantity?: number
-	QuantityPercentage?: number
-}
+import classes from './UnitedList.module.scss'
 
 type UnitedListProps = {
 	title?: React.ReactNode
-	items: Item[]
+	items: ItemChild[]
 	style?: React.CSSProperties
 }
 
@@ -28,8 +22,7 @@ const UnitedList: React.FC<UnitedListProps> = ({ title, items, style }) => {
 						<li key={item.Name} className={classes.quantityItem}>
 							<span className={classes.quantityItem_name}> {item.Name} </span>
 							<span className={classes.quantityItem_percentage}>
-								{' '}
-								{item?.QuantityPercentage || item.IncomePercentage}%{' '}
+								{item?.QuantityPercentage || item.IncomePercentage}%
 							</span>
 							<span className={classes.quantityItem_value}> {toDivide(item?.Quantity || item?.Income)} </span>
 						</li>

@@ -8,14 +8,14 @@ import RightSide from './RightSide'
 import Loading from '../../components/Loading'
 import Modal from '../../components/Modal'
 
-import exampleData from '../../assets/data/example_data.json'
-
+import Status from '../../shared/status'
 import useAppSelector from '../../hooks/useAppSelector'
 import { selectDatasetData, selectDatasetStatus } from '../../redux/slices/dataset/selectors'
 
-import Status from '../../shared/status'
-
 import ModalContext from '../../components/Modal/ModalContext'
+
+import exampleData from '../../assets/data/example_data.json'
+import type { Data, Dataset } from '../../redux/slices/dataset/types'
 
 import '../../assets/styles/pages/dashboard/Dashboard.scss'
 
@@ -30,13 +30,15 @@ const Dashboard: React.FC = () => {
 	const [isOpen, setIsOpen] = React.useState<boolean>(false)
 	const [modalChildComponent, setModalChildComponent] = React.useState<React.ReactNode>(<></>)
 
-	const [data, setData] = React.useState<any>(exampleData)
-	const [currentYear, setCurrentYear] = React.useState<string>(data?.Years[0] as string)
+	const [data, setData] = React.useState<Data>(exampleData as unknown as Data)
+	const [currentYear, setCurrentYear] = React.useState<number | string>(data?.Years[0] as string)
 
-	const currentDatasetByYear = data.Datasets.find((d: any) => d.Year === currentYear) // Дадасет выбранного года
+	const currentDatasetByYear = data.Datasets.find(
+		(d: Dataset) => String(d.Year) === String(currentYear)
+	) as Dataset // Дадасет выбранного года
 
 	React.useEffect(() => {
-		isLoaded && setData(dataset)
+		isLoaded && dataset && setData(dataset)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [status])
 

@@ -9,8 +9,10 @@ import toDivide from '../../../utils/toDivide'
 
 import avgIcon from '../../../assets/images/avg-x-icon.png'
 
+import type { Dataset } from '../../../redux/slices/dataset/types'
+
 type RightSideProps = {
-	data: any
+	data: Dataset
 }
 
 const RightSide: React.FC<RightSideProps> = ({ data }) => {

@@ -4,12 +4,7 @@ import positions from '../../../shared/positions'
 
 import toDivide from '../../../utils/toDivide'
 
-type Item = {
-	Name: string
-	Income: number
-	IncomePercentage: number
-	IncomeBreakdowns?: Item[]
-}
+import type { Item } from '../../../redux/slices/dataset/types'
 
 type BubbleCategoryProps = {
 	index: number

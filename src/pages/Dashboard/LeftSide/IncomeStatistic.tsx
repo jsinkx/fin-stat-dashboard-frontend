@@ -10,10 +10,10 @@ type IncomeStatisticProps = {
 const IncomeStatistic: React.FC<IncomeStatisticProps> = ({ TargetIncome, RealIncome }) => {
 	return (
 		<>
-			<h1 className='target-income'>{toDivide(TargetIncome)}</h1>
-			<h1 className='real-income'>
+			<h2 className='target-income'>{toDivide(TargetIncome)}</h2>
+			<h2 className='real-income'>
 				Real Income: <span> {toDivide(RealIncome)} </span>
-			</h1>
+			</h2>
 		</>
 	)
 }
