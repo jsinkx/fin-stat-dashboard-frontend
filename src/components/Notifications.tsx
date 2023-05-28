@@ -5,16 +5,16 @@ const Notifications: React.FC = () => {
 	return (
 		<ToastContainer
 			position='top-center'
-			autoClose={false}
+			autoClose={5000}
 			hideProgressBar={false}
-			newestOnTop
+			newestOnTop={false}
 			closeOnClick
 			rtl={false}
 			pauseOnFocusLoss
 			draggable
 			pauseOnHover
-			theme='light'
-			style={{ width: '800px' }}
+			theme='dark'
+			style={{ width: '800px', zIndex: '999999999999' }}
 		/>
 	)
 }

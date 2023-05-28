@@ -21,23 +21,6 @@ const RightSide: React.FC<RightSideProps> = ({ data }) => {
 		setIsOpen(true)
 	}
 
-	const handleClickDoughnutchart = () => {
-		setModalChildComponent(
-			<div
-				style={{
-					width: '50%',
-					margin: '2vw auto',
-				}}>
-				<Doughnutchart isInsideModal={true} marketingData={data.MarketingStrategies} />
-				<div style={{ marginTop: '30px', textAlign: 'center' }}>
-					<p>B2B: {toDivide(data.MarketingStrategies.B2B[0])}</p>
-					<p>B2C: {toDivide(data.MarketingStrategies.B2C[0])}</p>
-				</div>
-			</div>
-		)
-		setIsOpen(true)
-	}
-
 	return (
 		<article className='right-side'>
 			<div className='block block-avg'>
@@ -64,7 +47,7 @@ const RightSide: React.FC<RightSideProps> = ({ data }) => {
 				<p className='value'>{toDivide(data.MarketingStrategies.B2B[0])}</p>
 				<p>{data.MarketingStrategies.B2B[1]}%</p>
 				<div className='chart'>
-					<Doughnutchart onClick={handleClickDoughnutchart} marketingData={data.MarketingStrategies} />
+					<Doughnutchart marketingData={data.MarketingStrategies} />
 				</div>
 				<p>{data.MarketingStrategies.B2C[1]}%</p>
 				<p className='value'>{toDivide(data.MarketingStrategies.B2C[0])}</p>
