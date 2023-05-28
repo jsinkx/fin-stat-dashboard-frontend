@@ -52,6 +52,13 @@
 			font-weight: 400;
 			font-size: 1em;
 		}
+
+		.income-group-text {
+			margin-top: 0.2vw;
+			margin-left: 0.85vw;
+			font-size: 1vw;
+			user-select: none;
+		}
 	}
 
 	.bubble_centered {
@@ -88,10 +95,38 @@
 		transition: $hover-transition-default;
 		z-index: 999;
 
+		&_group {
+			cursor: pointer;
+			transition: all 1s linear;
+
+			&:hover {
+				animation: category-breath 3s linear infinite;
+				box-shadow: 0 0 30px rgba(108, 41, 176, 1), inset 0 0 8px rgba(20, 17, 124, 1);
+			}
+
+			@keyframes category-breath {
+				0% {
+					box-shadow: 0 0 60px rgb(152, 95, 209), inset 0 0 12px rgb(69, 66, 180);
+				}
+				50% {
+					box-shadow: 0 0 30px rgba(108, 41, 176, 1), inset 0 0 8px rgba(20, 17, 124, 1);
+				}
+				100% {
+					box-shadow: 0 0 60px rgb(152, 95, 209), inset 0 0 12px rgb(69, 66, 180);
+				}
+			}
+		}
+
 		p {
 			font-size: 0.8em;
 			margin: 0 auto;
 			padding: 0;
+		}
+
+		.income-group-text {
+			margin-top: -1vw;
+			font-size: 2vw;
+			user-select: none;
 		}
 	}
 
@@ -105,6 +140,28 @@
 		background: linear-gradient(to right, #262827, #21242d);
 		position: absolute;
 		transition: $hover-transition-default;
+
+		&_group {
+			cursor: pointer;
+			transition: all 1s linear;
+
+			&:hover {
+				animation: child-breath 3s linear infinite;
+				box-shadow: 0 0 20px #5d5f5e, inset 0 0 3px #505153;
+			}
+
+			@keyframes child-breath {
+				0% {
+					box-shadow: 0 0 40px #9e9e9e, inset 0 0 3px #505153;
+				}
+				50% {
+					box-shadow: 0 0 20px #5d5f5e, inset 0 0 6px #505153;
+				}
+				100% {
+					box-shadow: 0 0 40px #9e9e9e, inset 0 0 3px #505153;
+				}
+			}
+		}
 
 		.IncomeValues {
 			display: inline-block;

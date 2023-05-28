@@ -15,13 +15,14 @@ type Item = {
 type UnitedListProps = {
 	title?: React.ReactNode
 	items: Item[]
+	style?: React.CSSProperties
 }
 
-const UnitedList: React.FC<UnitedListProps> = ({ title, items }) => {
+const UnitedList: React.FC<UnitedListProps> = ({ title, items, style }) => {
 	return (
 		<>
 			{title && <h3> {title} </h3>}
-			<ul className={classes.quantityItems}>
+			<ul className={classes.quantityItems} style={style}>
 				{items &&
 					items.map((item) => (
 						<li key={item.Name} className={classes.quantityItem}>
