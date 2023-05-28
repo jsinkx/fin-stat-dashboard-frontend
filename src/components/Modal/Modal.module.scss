@@ -13,15 +13,16 @@
 	user-select: none;
 
 	&_window {
-		padding: 1vw;
-		padding-top: 0.5vw;
 		background-color: $dark-extra-blue;
 		width: 50vw;
-		min-height: 25vw;
-		margin: 10vw auto;
+		padding-top: 1vh;
+		padding-bottom: 3vw;
+		margin: 7% auto;
+		padding: 2vw;
+		padding-top: 0.1vw;
 
 		header {
-			margin: 0.5vw;
+			margin: 1vw;
 
 			button {
 				float: right;
@@ -30,7 +31,6 @@
 				background: none;
 				color: inherit;
 				border: none;
-				padding: 0;
 				font: inherit;
 				cursor: pointer;
 				outline: inherit;
@@ -44,12 +44,6 @@
 					opacity: 0.6;
 				}
 			}
-		}
-
-		.chart {
-			width: 30%;
-			height: 30%;
-			border: 1px solid red;
 		}
 	}
 }
