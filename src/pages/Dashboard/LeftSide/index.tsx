@@ -1,9 +1,9 @@
 import React from 'react'
 
 import Areachart from './Areachart'
-import QuantityItems from './QuantityItems'
 import IncomeStatistic from './IncomeStatistic'
 
+import UnitedList from '../../../components/UnitedList'
 import ModalContext from '../../../components/Modal/ModalContext'
 
 type LeftSideProps = {
@@ -43,7 +43,7 @@ const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurren
 				<h2> Financial Statistics </h2>
 				<IncomeStatistic TargetIncome={data?.TargetIncome} RealIncome={data?.RealIncome} />
 				<Areachart onClick={handleClickAreachart} dataByMonths={data?.ByMonths} />
-				<QuantityItems items={data?.Items} />
+				<UnitedList title="Quantity of Item's" items={data?.Items} />
 			</div>
 		</aside>
 	)
