@@ -4,13 +4,14 @@ import { Route, Routes } from 'react-router-dom'
 import HomeLayout from './layouts/HomeLayout'
 import DashboardLayout from './layouts/DashboardLayout'
 
-import Home from './pages/Home'
-import Prank from './pages/Prank'
-import Dashboard from './pages/Dashboard'
-
 import Notifications from './components/Notifications'
 
 import 'react-toastify/dist/ReactToastify.css'
+import Loading from './components/Loading'
+
+const Home = React.lazy(() => import(/* webpackChunkName: "Home" */ './pages/Home'))
+const Prank = React.lazy(() => import(/* webpackChunkName: "Prank" */ './pages/Prank'))
+const Dashboard = React.lazy(() => import(/* webpackChunkName: "Dashboard" */ './pages/Dashboard'))
 
 const App: React.FC = () => {
 	return (
@@ -18,13 +19,45 @@ const App: React.FC = () => {
 			<Notifications />
 			<Routes>
 				<Route path='/' element={<HomeLayout />}>
-					<Route path='' element={<Home />} />
-					<Route path='*' element={<Home />} />
+					<Route
+						path=''
+						element={
+							<React.Suspense fallback={<Loading />}>
+								<Home />
+							</React.Suspense>
+						}
+					/>
+					<Route
+						path='*'
+						element={
+							<React.Suspense fallback={<Loading />}>
+								<Home />
+							</React.Suspense>
+						}
+					/>
 				</Route>
 				<Route path='/dashboard' element={<DashboardLayout />}>
-					<Route path='' element={<Dashboard />}></Route>
-					<Route path='uploaded' element={<Dashboard />}></Route>
-					<Route path='v2' element={<Prank />}></Route>
+					<Route
+						path=''
+						element={
+							<React.Suspense fallback={<Loading />}>
+								<Dashboard />
+							</React.Suspense>
+						}></Route>
+					<Route
+						path='uploaded'
+						element={
+							<React.Suspense fallback={<Loading />}>
+								<Dashboard />
+							</React.Suspense>
+						}></Route>
+					<Route
+						path='v2'
+						element={
+							<React.Suspense fallback={<Loading />}>
+								<Prank />
+							</React.Suspense>
+						}></Route>
 				</Route>
 			</Routes>
 		</div>
