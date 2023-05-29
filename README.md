@@ -1,7 +1,7 @@
 # Financial Statistics Dashboard Frontend
 ---
 
-## [Available production](https://fin-stat-dashboard-frontend.vercel.app)
+## [Available production](https://fin-stat-dashboard.vercel.app)
 
 ## Installation
 
