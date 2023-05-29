@@ -5,8 +5,7 @@ import Status from '../../shared/status'
 import useAppSelector from '../../hooks/useAppSelector'
 import { selectDatasetStatus } from '../../redux/slices/dataset/selectors'
 
-import logo from '../../assets/images/milk-logo.png'
-
+import logo from '../../assets/images/logo/milk-logo.png'
 import classes from './Header.module.scss'
 
 const Header: React.FC = () => {

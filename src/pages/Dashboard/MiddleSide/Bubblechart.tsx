@@ -2,90 +2,42 @@ import React from 'react'
 
 import positions from '../../../shared/positions'
 
-import moneyIcon from '../../../assets/images/money-icon.png'
+import moneyIcon from '../../../assets/images/icons/money-icon.png'
 
+import Modal from '../../../components/Modal'
 import BubbleChild from './BubbleChild'
 import BubbleCategory from './BubbleCategory'
 
-import UnitedList from '../../../components/UnitedList'
-import ModalContext from '../../../components/Modal/ModalContext'
-
-import toDivide from '../../../utils/toDivide'
-
 import type { Dataset, Item, ItemChild } from '../../../redux/slices/dataset/types'
+import ItemsListCategory from './ItemsListCategory'
+import ItemsListChildren from './ItemsListChildren'
 
 type BubblechartProps = {
 	data: Dataset
 }
 
 const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
-	const { setIsOpen, setModalChildComponent } = React.useContext(ModalContext)
+	const [isOpen, setIsOpen] = React.useState<boolean>(false)
+	const [currentIsCategory, setCurrentIsCategory] = React.useState<boolean>(true)
+	const [currentItems, setCurrentItems] = React.useState<Item | Item[]>()
 
 	const maxIncome = Math.max(...data?.Items.map((item: Item) => item.Income))
 
-	const handleClickBubbleCategoryGroup = (items: Item[]) => {
-		setModalChildComponent(
-			<div
-				style={{
-					display: 'flex',
-					justifyContent: 'center',
-					flexWrap: 'wrap',
-					marginTop: '4vw',
-				}}>
-				{items.map((item: Item) => {
-					return (
-						<div
-							key={item.Name}
-							style={{
-								display: 'initial',
-								margin: '1vw 5vw',
-							}}>
-							<UnitedList
-								title={`${item.Name} ${item.IncomePercentage}% (${toDivide(item.Income)})`}
-								items={item.IncomeBreakdowns}
-							/>
-						</div>
-					)
-				})}
-			</div>
-		)
-		setIsOpen(true)
-	}
-
-	const handleClickBubbleChildGroup = (item: Item) => {
-		setModalChildComponent(
-			<div
-				style={{
-					display: 'flex',
-					justifyContent: 'center',
-					flexWrap: 'wrap',
-					marginTop: '4vw',
-					fontSize: '1.25em',
-				}}>
-				<div
-					key={item.Name}
-					style={{
-						display: 'initial',
-						width: '400px',
-						marginInline: 'auto',
-					}}>
-					<h2 style={{ textAlign: 'center' }}>
-						{item.Name} {item.IncomePercentage}% ({toDivide(item.Income)})
-					</h2>
-					<UnitedList
-						items={item.IncomeBreakdowns}
-						style={{
-							marginLeft: '12%',
-						}}
-					/>
-				</div>
-			</div>
-		)
+	const handleClickBubbleGrouped = (isCategory: boolean, items: Item | Item[]) => {
+		setCurrentIsCategory(isCategory)
+		setCurrentItems(items)
 		setIsOpen(true)
 	}
 
 	return (
 		<>
+			<Modal {...{ isOpen, setIsOpen }}>
+				{currentIsCategory ? (
+					<ItemsListCategory items={currentItems as Item[]} />
+				) : (
+					<ItemsListChildren item={currentItems as Item} />
+				)}
+			</Modal>
 			<div className='bubble_centered'>
 				<img src={moneyIcon} alt='money icon' />
 				<h3>{data?.IncomePercent}%</h3>
@@ -97,14 +49,14 @@ const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 					if (index + 1 === positions.length) {
 						return (
 							<BubbleCategory
-								onClick={() => handleClickBubbleCategoryGroup(data?.Items.slice(index))}
+								onClick={() => handleClickBubbleGrouped(true, data?.Items.slice(index))}
 								key={item.Name}
 								isGroupBubble={true}
 								{...{ index, item, maxIncome }}
 							/>
 						)
 					} else if (index + 1 > positions.length) {
-						return <React.Fragment key={item.Name}></React.Fragment>
+						return null
 					}
 
 					return (
@@ -115,14 +67,14 @@ const Bubblechart: React.FC<BubblechartProps> = ({ data }) => {
 									if (indexChild + 1 === positions[index]?.bubbleChildX.length) {
 										return (
 											<BubbleChild
-												onClick={() => handleClickBubbleChildGroup(item)}
+												onClick={() => handleClickBubbleGrouped(false, item)}
 												key={itemChild.Name}
 												isGroupBubble={true}
 												{...{ index, indexChild, itemChild }}
 											/>
 										)
 									} else if (indexChild + 1 > (positions[index]?.bubbleChildX?.length || 0)) {
-										return <></>
+										return null
 									}
 
 									return <BubbleChild key={itemChild.Name} {...{ index, indexChild, itemChild }} />

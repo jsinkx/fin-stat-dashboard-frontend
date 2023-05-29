@@ -1,6 +1,6 @@
 import React from 'react'
 
-import dashboardPic from '../assets/images/dashboard.png'
+import dashboardPic from '../assets/images/pictures/dashboard.png'
 import '../assets/styles/pages/Prank.scss'
 
 const Prank: React.FC = () => {

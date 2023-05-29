@@ -3,11 +3,9 @@ import React from 'react'
 import Barchart from './Barchart'
 import Doughnutchart from './Doughnutchart'
 
-import ModalContext from '../../../components/Modal/ModalContext'
-
 import toDivide from '../../../utils/toDivide'
 
-import avgIcon from '../../../assets/images/avg-x-icon.png'
+import avgIcon from '../../../assets/images/icons/avg-x-icon.png'
 
 import type { Dataset } from '../../../redux/slices/dataset/types'
 
@@ -16,13 +14,6 @@ type RightSideProps = {
 }
 
 const RightSide: React.FC<RightSideProps> = ({ data }) => {
-	const { setIsOpen, setModalChildComponent } = React.useContext(ModalContext)
-
-	const handleClickBarchart = () => {
-		setModalChildComponent(<Barchart isInsideModal={true} dataByMonths={data?.ByMonths} />)
-		setIsOpen(true)
-	}
-
 	return (
 		<article className='right-side'>
 			<div className='block block-avg'>
@@ -40,7 +31,7 @@ const RightSide: React.FC<RightSideProps> = ({ data }) => {
 					<span>Profits</span>
 				</h2>
 
-				<Barchart onClick={handleClickBarchart} dataByMonths={data.OperatingProfits.ByMonths} />
+				<Barchart dataByMonths={data.OperatingProfits.ByMonths} />
 
 				<p className='value'>{toDivide(data.OperatingProfits.Total)}</p>
 			</div>

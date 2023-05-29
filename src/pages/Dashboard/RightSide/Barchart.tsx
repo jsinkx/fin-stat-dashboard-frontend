@@ -5,6 +5,7 @@ import { Bar } from 'react-chartjs-2'
 import Colors from '../../../shared/colors'
 
 import type { DataByMonths } from '../../../redux/slices/dataset/types'
+import Modal from '../../../components/Modal'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
@@ -68,11 +69,11 @@ const optionsForInsideModal = {
 
 type BarchartProps = {
 	dataByMonths: DataByMonths
-	isInsideModal?: boolean
-	onClick?: () => void
 }
 
-const Barchart: React.FC<BarchartProps> = ({ dataByMonths, isInsideModal, onClick }) => {
+const Barchart: React.FC<BarchartProps> = ({ dataByMonths }) => {
+	const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
 	const labels = Object.keys(dataByMonths)
 
 	const data = {
@@ -86,16 +87,28 @@ const Barchart: React.FC<BarchartProps> = ({ dataByMonths, isInsideModal, onClic
 	}
 
 	return (
-		<Bar
-			onClick={onClick}
-			style={{
-				maxHeight: isInsideModal ? '110%' : '70%',
-				width: isInsideModal ? '100%' : 'none',
-				cursor: isInsideModal ? 'default' : 'pointer',
-			}}
-			options={isInsideModal ? optionsForInsideModal : options}
-			data={data}
-		/>
+		<>
+			<Modal {...{ isOpen, setIsOpen }}>
+				<Bar
+					style={{
+						maxHeight: '110%',
+						width: '100%',
+						cursor: 'default',
+					}}
+					options={optionsForInsideModal}
+					data={data}
+				/>
+			</Modal>
+			<Bar
+				onClick={() => setIsOpen(true)}
+				style={{
+					maxHeight: '70%',
+					cursor: 'pointer',
+				}}
+				options={options}
+				data={data}
+			/>
+		</>
 	)
 }
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-import buildPic from '../assets/images/Untitled-1.png'
-import analyticsPic from '../assets/images/Sales Analytics.png'
+import buildPic from '../assets/images/pictures/m-glossy-machine.png'
+import analyticsPic from '../assets/images/pictures/m-sales-analytics.png'
 
 import Status from '../shared/status'
 import useAppSelector from '../hooks/useAppSelector'
