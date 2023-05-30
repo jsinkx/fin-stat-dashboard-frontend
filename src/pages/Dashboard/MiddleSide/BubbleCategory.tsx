@@ -41,7 +41,7 @@ const BubbleCategory: React.FC<BubbleCategoryProps> = ({
 					boxShadow:
 						item.Income >= maxIncome && !isGroupBubble ? '0 0 30px #d61059, inset 0 0 1px #0c1097' : 'none',
 				}}>
-				{!isGroupBubble && <p>{toDivide(item.Income)}</p>}
+				{!isGroupBubble && <p className='income-value'>{toDivide(item.Income)}</p>}
 				<p className={!isGroupBubble ? '' : 'income-group-text'}>{!isGroupBubble ? item.Name : '...'}</p>
 				{!isGroupBubble && <p className='income-percentage'>{item.IncomePercentage}%</p>}
 			</div>
