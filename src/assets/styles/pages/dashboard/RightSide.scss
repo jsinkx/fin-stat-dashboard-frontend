@@ -7,6 +7,8 @@
 	user-select: none;
 	padding: 0;
 
+	margin-top: -20px;
+
 	.value {
 		user-select: all;
 	}
@@ -76,6 +78,28 @@
 			.chart {
 				width: 80%;
 				margin: 10px auto;
+			}
+		}
+	}
+
+	@media (max-width: 1280px) {
+		.block-avg {
+			h2,
+			p {
+				font-size: 1em;
+			}
+		}
+		.block-profit {
+			h2 {
+				font-size: 0.85em;
+
+				span {
+					font-size: 1em;
+				}
+			}
+
+			p {
+				font-size: 1em;
 			}
 		}
 	}

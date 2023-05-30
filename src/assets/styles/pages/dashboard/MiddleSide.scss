@@ -5,8 +5,14 @@
 	justify-content: center;
 	width: 100%;
 	position: relative;
-	transition: $hover-transition-default;
-	margin-top: -20px;
+	//margin-top: -45px;
+	margin-top: -2%;
+	margin-left: -30px;
+
+	@media (max-width: 1280px) {
+		margin-left: -60px;
+		border: 1px solid red;
+	}
 
 	::selection {
 		background-color: #c8506fff;
@@ -36,7 +42,6 @@
 		border-radius: 50%;
 		box-sizing: border-box;
 		background-color: black;
-		transition: $hover-transition-default;
 		user-select: none;
 		z-index: 9999;
 
@@ -77,6 +82,15 @@
 		}
 	}
 
+	.bubble_centered_border,
+	.bubble_centered,
+	.bubble_category,
+	.bubble_child,
+	.bubble_category_group,
+	.bubble_child_group {
+		transition: height 0.5s, width 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+	}
+
 	.bubble_category {
 		position: absolute;
 		display: flex;
@@ -90,12 +104,10 @@
 		font-size: 1vw;
 		border-radius: 50%;
 		box-sizing: border-box;
-		transition: $hover-transition-default;
 		z-index: 999;
 
 		&_group {
 			cursor: pointer;
-			transition: all 1s linear;
 
 			&:hover {
 				animation: category-breath 3s linear infinite;
@@ -137,11 +149,9 @@
 		text-align: left;
 		background: linear-gradient(to right, #262827, #21242d);
 		position: absolute;
-		transition: $hover-transition-default;
 
 		&_group {
 			cursor: pointer;
-			transition: all 1s linear;
 
 			&:hover {
 				animation: child-breath 3s linear infinite;

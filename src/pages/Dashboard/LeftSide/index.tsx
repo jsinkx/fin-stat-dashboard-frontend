@@ -23,6 +23,7 @@ const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurren
 
 	React.useEffect(() => {
 		setCurrentYear(years[0] as string)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [pathname])
 
 	return (
