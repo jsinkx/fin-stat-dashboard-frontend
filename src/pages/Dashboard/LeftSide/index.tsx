@@ -5,6 +5,7 @@ import Areachart from './Areachart'
 import IncomeStatistic from './IncomeStatistic'
 
 import UnitedList from '../../../components/UnitedList'
+import { useLocation } from 'react-router-dom'
 
 import { Dataset } from '../../../redux/slices/dataset/types'
 
@@ -16,7 +17,13 @@ type LeftSideProps = {
 }
 
 const LeftSide: React.FC<LeftSideProps> = ({ data, years, currentYear, setCurrentYear }) => {
+	const { pathname } = useLocation()
+
 	const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
+	React.useEffect(() => {
+		setCurrentYear(years[0] as string)
+	}, [pathname])
 
 	return (
 		<>

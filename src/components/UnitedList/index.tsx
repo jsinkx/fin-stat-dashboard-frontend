@@ -22,7 +22,8 @@ const UnitedList: React.FC<UnitedListProps> = ({ title, items, style }) => {
 						<li key={item.Name} className={classes.quantityItem}>
 							<span className={classes.quantityItem_name}> {item.Name} </span>
 							<span className={classes.quantityItem_percentage}>
-								{item?.QuantityPercentage || item.IncomePercentage}%&nbsp;
+								{item?.QuantityPercentage !== undefined ? item?.QuantityPercentage : item.IncomePercentage}
+								%&nbsp;
 							</span>
 							<span className={classes.quantityItem_value}> {toDivide(item?.Quantity || item?.Income)} </span>
 						</li>

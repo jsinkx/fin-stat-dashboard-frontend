@@ -23,6 +23,7 @@ const Dashboard: React.FC = () => {
 	const { pathname } = useLocation()
 
 	const isLoaded = status === Status.LOADED
+	const isUploadPage = pathname.split('/')[2] === 'uploaded'
 
 	const [data, setData] = React.useState<Data>(exampleData as unknown as Data)
 	const [currentYear, setCurrentYear] = React.useState<number | string>(data?.Years[0] as string)
@@ -32,15 +33,16 @@ const Dashboard: React.FC = () => {
 	) as Dataset // Дадасет выбранного года
 
 	React.useEffect(() => {
-		isLoaded && dataset && setData(dataset)
+		if (isUploadPage) isLoaded && dataset && setData(dataset)
+		else setData(exampleData as unknown as Data)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [status])
+	}, [status, pathname])
 
-	if ((status === Status.UNSET || status === Status.ERROR) && pathname.split('/')[2] === 'uploaded') {
+	if ((status === Status.UNSET || status === Status.ERROR) && isUploadPage) {
 		return <Navigate to='/' />
 	}
 
-	return !isLoaded && pathname.split('/')[2] === 'uploaded' ? (
+	return !isLoaded && isUploadPage ? (
 		<Loading />
 	) : (
 		<div className='content'>
